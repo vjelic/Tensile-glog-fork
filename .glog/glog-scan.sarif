@@ -1,0 +1,2041 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Glog.AI",
+          "organization": "Glog.AI",
+          "fullName": "Glog, Making software more secure",
+          "version": "1.0.0",
+          "semanticVersion": "1.0.0",
+          "informationUri": "https://www.glog.ai",
+          "rules": [
+            {
+              "id": "glog-f9843eff-e7aa-42d8-bd40-9a65e3f54d1f",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nUnsafe YAML Load Vulnerability in Python refers to a security flaw that occurs when a program uses the `yaml.load()` function from the PyYAML library to deserialize untrusted data. This function can execute arbitrary Python commands, making it a serious security risk if the input is not controlled or sanitized. An attacker can exploit this vulnerability to execute arbitrary code, leading to potential system compromise.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use the `safe_load()` function instead of `load()`. The `safe_load()` function can only parse a subset of YAML and does not allow arbitrary code execution. Always avoid deserializing data from untrusted sources.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\ndata = yaml.load(inf)\n```\n\nwith:\n\n```python\ndata = yaml.safe_load(inf)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-927103af-c3a3-4490-a316-3224f804fd74",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nUnsafe YAML Load Vulnerability in Python refers to a security flaw that occurs when a program uses the `yaml.load()` function from the PyYAML library to deserialize untrusted data. This function can execute arbitrary Python commands, making it a serious security risk if the input is not controlled or sanitized. An attacker can exploit this vulnerability to execute arbitrary code, leading to potential system compromise.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use the `safe_load()` function instead of `load()`. The `safe_load()` function can only parse a subset of YAML and does not allow arbitrary code execution. Always avoid deserializing data from untrusted sources.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\ndata = yaml.load(inf)\n```\n\nwith:\n\n```python\ndata = yaml.safe_load(inf)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-106a73a8-8334-46be-8133-4508623b2e21",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `Unsafe YAML Load Vulnerability` in Python is a security vulnerability that occurs when the `load()` function of the PyYAML library is used. This function can execute arbitrary Python commands resulting from the deserialization of malicious YAML input. This can lead to a variety of attacks, including remote code execution, if the YAML input is from an untrusted source.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use the `safe_load()` function instead of `load()`. The `safe_load()` function can only deserialize a subset of YAML and it does not allow arbitrary code execution.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\nimport yaml\ndata = yaml.load(inFile)\n```\n\nwith:\n\n```python\nimport yaml\ndata = yaml.safe_load(inFile)\n```\n\n## Library Dependencies\n\nThe library dependency required by the code example to execute properly is PyYAML.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-ee434889-c4d9-45a4-9ebb-34e812ecd1d8",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `Unsafe YAML Load Vulnerability` in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential Remote Code Execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid using `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\nimport yaml\ndata = yaml.load(f)\n```\n\nwith:\n\n```python\nimport yaml\ndata = yaml.safe_load(f)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-3a892611-24f6-44b0-bb27-6b2d2a6323aa",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nIn Python, the `eval()` function is used to evaluate the Python expression which is passed to it as a string. However, it is considered dangerous as it can execute potentially harmful, arbitrary code. This is especially true if you are using `eval()` to evaluate user-supplied strings, which can lead to a high risk of code injection attacks.\n\nThe `ast.literal_eval()` function, on the other hand, safely parses and evaluates an expression for Python literals (strings, bytes, numbers, tuples, lists, dicts, sets, booleans, and None). It does not evaluate complex expressions, such as function calls, which makes it safer than `eval()`.\n\n## Mitigation Advice\n\nAvoid using `eval()` whenever possible, especially with user-supplied input. If you need to evaluate a simple expression, consider using `ast.literal_eval()` instead. It only evaluates Python literals and cannot execute arbitrary code.\n\n## Source Code Fix Recommendation\n\nReplace the `eval()` function with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cIdxVal0\"] = ast.literal_eval(vars[\"cIdxExpr0\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are accessible to anonymous users at the time of writing this report."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-7149f1ef-a5a0-4c77-aacb-dcfd2bdb1cb6",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential remote code execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should never use `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\ndata = yaml.safe_load(f)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library:\n\n```bash\npip install pyyaml\n```\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-c92ed013-de1c-4b1e-860c-8ee9cf2ef875",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `eval()` function in Python is a potential security risk as it can execute arbitrary Python code. If an attacker can control the input to `eval()`, they can potentially execute malicious code. This is especially dangerous if your program runs with special privileges.\n\nThe `ast.literal_eval()` function is a safer alternative as it only evaluates Python literals and does not execute arbitrary code. Python literals include strings, bytes, numbers, tuples, lists, dicts, sets, booleans, and `None`.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid using `eval()` with user-supplied input. If you need to evaluate Python literals from a string, use `ast.literal_eval()` instead. \n\n## Source Code Fix Recommendation\n\nHere is how you can fix the vulnerability in the provided code:\n\n```python\nimport ast\n\nvars[\"cIdxVal1\"] = ast.literal_eval(vars[\"cIdxExpr1\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is included in the Python Standard Library.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-2fea8236-f93e-43af-9356-f2bc08b4d638",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe vulnerability \"File (runScriptName) Vulnerable Due to Permissive Chmod Mask 0o777\" in Python programming language refers to the insecure permission settings for a file. The `os.chmod(runScriptName, 0o777)` command sets the permissions of the file `runScriptName` to `777` (in octal), which means that the file is readable, writable, and executable by all users. This can lead to unauthorized access, modification, or execution of the file, potentially leading to a security breach.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should restrict the permissions of the file to only those necessary for its intended use. For example, if the file only needs to be read and written by the user, but not executed, you can set the permissions to `600` (in octal). If the file needs to be executed by the user, but not by others, you can set the permissions to `700`.\n\n## Source Code Fix Recommendation\n\nReplace the vulnerable line of code:\n\n```python\nos.chmod(runScriptName, 0o777)\n```\n\nwith a more secure line of code, such as:\n\n```python\nos.chmod(runScriptName, 0o600)\n```\n\nor:\n\n```python\nos.chmod(runScriptName, 0o700)\n```\n\n## Library Dependencies\n\nThe code example requires the `os` library, which is part of the Python Standard Library and does not need to be installed separately.\n\n## References\n\n- [CWE-732: Incorrect Permission Assignment for Critical Resource](https://cwe.mitre.org/data/definitions/732.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B103"
+                ]
+              }
+            },
+            {
+              "id": "glog-a65c4467-954b-4478-9779-4dabdeeab60c",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `eval()` function in Python is a potential security risk as it can execute arbitrary Python code. If an attacker can control the input to `eval()`, they can run any Python code they wish, including code to harm your system or data. This is known as code injection and is a serious security vulnerability.\n\nIn the provided code snippet, `eval()` is used to evaluate a string from a dictionary, which could potentially be manipulated by an attacker:\n\n```python\nvars[\"cIdxVal\"] = eval(vars[\"cIdxExpr\"])\n```\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression for Python literals (strings, bytes, numbers, tuples, lists, dicts, sets, booleans, and None). It does not evaluate complex expressions or function calls, providing a safer alternative to `eval()`.\n\n## Source Code Fix Recommendation\n\nHere is how you can replace `eval()` with `ast.literal_eval()` in the provided code snippet:\n\n```python\nimport ast\n\nvars[\"cIdxVal\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-562b0fe2-fd73-4d0f-825b-adff39e84f90",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `eval()` function in Python is a potential security risk as it can execute arbitrary Python code. If an attacker can control the input to `eval()`, they can run any Python code they wish, including code to harm your system or data. This is known as code injection and is a serious security vulnerability.\n\nIn the provided code snippet, `eval()` is used to evaluate a string from a dictionary, which could potentially be manipulated by an attacker:\n\n```python\nvars[\"cIdxVal\"] = eval(vars[\"cIdxExpr\"])\n```\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression for Python literals (strings, bytes, numbers, tuples, lists, dicts, sets, booleans, and None). It does not evaluate complex expressions or function calls, providing a safer alternative to `eval()`.\n\n## Source Code Fix Recommendation\n\nHere is how you can replace `eval()` with `ast.literal_eval()` in the provided code snippet:\n\n```python\nimport ast\n\nvars[\"cIdxVal\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-e59a6570-d391-4eab-aec2-a51e9cb04344",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-795d0f8a-aa0f-4e12-a6fd-343531fe4e14",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-13a54890-b518-4edd-95e5-ab91e020c680",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-9f00aa7c-8d6a-4c1f-aafd-c5a4661bbaf3",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-88db6868-1896-4965-ade3-6a07fb8fcabe",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-e2573449-b639-4057-a6a9-4ccb9424eb87",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-29eada07-2dfe-4f4c-88fc-29c49338b0c4",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-5403c709-aab7-4bfd-8df0-9bb75d64079e",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-008b67e6-ac57-466d-ad27-3dc0f801a91b",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-7de37e1e-b776-4e6f-bc2f-337f258ee0c7",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-23d5741e-7cba-4fb0-a86d-98be055a4cea",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-9db6123e-edb7-477d-bee8-cd68b25b3fb6",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only Python literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nvars[\"cidx\"] = ast.literal_eval(vars[\"cIdxExpr\"])\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are active and accessible to anonymous users at the time of writing."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-e7e7099f-a9dd-463a-abcc-1072e92dbdbe",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" vulnerability in Python refers to the potential security risks associated with the use of the `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string is derived from user input, as it can lead to arbitrary code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. It is safer than `eval()` because it only evaluates Python literals and does not evaluate complex expressions or function calls, thus preventing arbitrary code execution.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\ncIdx = eval(cIdxStr)\n```\n\nwith:\n\n```python\nimport ast\ncIdx = ast.literal_eval(cIdxStr)\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is a built-in Python library and does not need to be installed separately.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)\n\nPlease note that the links provided are accessible to anonymous users at the time of writing this report."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-1bffb4c0-fc11-4984-92bd-bbea82300359",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when the `yaml.load()` function is used without specifying a `Loader`. This function can execute arbitrary Python commands, which can lead to remote code execution (RCE) if an attacker can control the input to `yaml.load()`.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should always use `yaml.safe_load()` instead of `yaml.load()`. The `safe_load()` function can only parse a subset of YAML that excludes all the potentially dangerous constructs.\n\n## Source Code Fix Recommendation\n\nHere is how you can fix the provided code:\n\n```python\nreturn yaml.safe_load(rawConfig)[\"custom.config\"]\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-5d690f3b-72f5-4ead-a3b9-e69d82de548e",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security flaw that occurs when the `yaml.load()` function is used. This function can create arbitrary Python objects, which can be exploited to execute arbitrary code. This is because the `yaml.load()` function does not sanitize input, making it possible for an attacker to inject malicious code.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use the `yaml.safe_load()` function instead of `yaml.load()`. The `safe_load()` function only creates simple Python objects like lists or dictionaries.\n\n## Source Code Fix Recommendation\n\nReplace the vulnerable line of code:\n\n```python\ntensileLibrary = yaml.load(stream, yamlLoader)\n```\n\nwith the safe version:\n\n```python\ntensileLibrary = yaml.safe_load(stream)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-1282cd2d-5521-4bdb-ac90-2bc1c345c597",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe vulnerability \"File Permission Vulnerability due to Chmod 0o777 Setting on bytearrayFileName\" in Python programming language refers to the insecure permission setting on a file. The `os.chmod(bytearrayFileName, 0o777)` command sets the permission of the file to 777, which means that all users can read, write, and execute the file. This can lead to unauthorized access, modification, or execution of the file, leading to potential security risks.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to set more restrictive permissions on the file. The permissions should be set in a way that only authorized users can access and modify the file. Avoid using 777 permissions unless absolutely necessary.\n\n## Source Code Fix Recommendation\n\nInstead of using `os.chmod(bytearrayFileName, 0o777)`, use more restrictive permissions. For example, you can use 644 permissions, which allow the owner to read and write the file, and others to only read the file:\n\n```python\nos.chmod(bytearrayFileName, 0o644)\n```\n\n## Library Dependencies\n\nThe code example requires the `os` library, which is a standard library in Python and does not need to be installed separately.\n\n## References\n\n- [CWE-732: Incorrect Permission Assignment for Critical Resource](https://cwe.mitre.org/data/definitions/732.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B103"
+                ]
+              }
+            },
+            {
+              "id": "glog-436d4767-280e-43e6-8dc9-f6ec925aec5f",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe vulnerability \"Potential Insecure Function Use - Consider Safer ast.literal_eval\" refers to the potential security risks associated with the use of Python's `eval()` function. The `eval()` function takes a string and evaluates it as a Python expression. This can be dangerous if the string being evaluated is derived from user input or other untrusted sources, as it can lead to arbitrary code execution.\n\nIn the provided code snippet, `eval(valueStr)` is used to evaluate a string as a Python expression. If `valueStr` is derived from an untrusted source, this could lead to a security vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, consider using `ast.literal_eval()` instead of `eval()`. The `ast.literal_eval()` function safely parses and evaluates an expression node or a string containing a Python literal or container display. Unlike `eval()`, `ast.literal_eval()` does not evaluate complex expressions, only literals, making it safer to use with untrusted input.\n\n## Source Code Fix Recommendation\n\nReplace the use of `eval()` with `ast.literal_eval()`:\n\n```python\nimport ast\n\nreplacedCode[:valStartPos] + str( min(maxVmcnt, ast.literal_eval(valueStr)) ) + \")\"\n```\n\n## Library Dependencies\n\nThe code example requires the `ast` library, which is included in the Python Standard Library.\n\n## References\n\n- [CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')](https://cwe.mitre.org/data/definitions/95.html)\n\nPlease note that the links provided are accessible to anonymous users at the time of writing this report."
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-936d7313-830e-4372-a6d6-89ec875fe36f",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential remote code execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should never use `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\ndata = yaml.safe_load(f)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library:\n\n```bash\npip install pyyaml\n```\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-e8a2105e-2dc0-4e66-9cdc-2307da40f33c",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `eval()` function in Python is a potential security risk as it can execute arbitrary Python code. If an attacker can control the input to `eval()`, they can potentially execute malicious code, leading to a variety of attacks such as code injection, denial of service, or even complete system compromise.\n\nThis vulnerability is often referred to as \"Potential Insecurity in Function - Consider Safer `ast.literal_eval` Usage\". The `ast.literal_eval()` function is a safer alternative to `eval()` as it only evaluates Python literals and does not execute arbitrary code.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `eval()` whenever possible. If you need to evaluate Python literals from a string, use `ast.literal_eval()` instead. Always validate and sanitize input before passing it to any function that executes or evaluates code.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\nvalue = eval(value)\n```\n\nwith:\n\n```python\nimport ast\nvalue = ast.literal_eval(value)\n```\n\n## Library Dependencies\n\nThe `ast` module is part of the Python Standard Library, so no additional library dependencies are required.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-68c0d879-d0af-4a4a-99bf-68b3430b771d",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `eval()` function in Python is a potential security risk as it can execute arbitrary Python code. If an attacker can control the input to `eval()`, they can potentially execute malicious code, leading to a variety of attacks such as code injection, denial of service, or even complete system compromise.\n\nThis vulnerability is often referred to as \"Potential Insecurity in Function - Consider Safer `ast.literal_eval` Usage\". The `ast.literal_eval()` function is a safer alternative to `eval()` as it only evaluates Python literals and does not execute arbitrary code.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `eval()` whenever possible. If you need to evaluate Python literals from a string, use `ast.literal_eval()` instead. Always validate and sanitize input before passing it to any function that executes or evaluates code.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\nvalue = eval(value)\n```\n\nwith:\n\n```python\nimport ast\nvalue = ast.literal_eval(value)\n```\n\n## Library Dependencies\n\nThe `ast` module is part of the Python Standard Library, so no additional library dependencies are required.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-c2de2b49-3b1d-410b-bc56-3f204d36b4fa",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `shell=True` in the subprocess module of Python is a potential security vulnerability. When using `shell=True`, the specified command is executed through the shell. This can be a security hazard if combined with untrusted input as it allows shell injection, a form of command injection attack where an attacker can execute arbitrary commands in the system shell.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `shell=True` whenever possible, especially if the command string is constructed using untrusted input. Instead, use `shell=False` and pass the command and its arguments as a list.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```python\nfrom subprocess import Popen, PIPE\ncmd = \"ls -l\"\nprocess = Popen(cmd, stdout=PIPE, shell=True)\n```\n\nUse:\n\n```python\nfrom subprocess import Popen, PIPE\ncmd = [\"ls\", \"-l\"]\nprocess = Popen(cmd, stdout=PIPE, shell=False)\n```\n\n## Library Dependencies\n\nThe code example requires the `subprocess` module, which is part of the Python Standard Library, so no additional library dependencies are needed.\n\n## References\n\n- [OWASP Command Injection](https://owasp.org/www-community/attacks/Command_Injection)\n- [CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')](https://cwe.mitre.org/data/definitions/78.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B602"
+                ]
+              }
+            },
+            {
+              "id": "glog-a2e2eed8-daed-442d-85de-30db9fd7869a",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `eval()` function in Python is a potential security risk as it can execute arbitrary Python code. If an attacker can control the input to `eval()`, they can potentially execute malicious code, leading to a variety of attacks such as code injection, denial of service, or even complete system compromise.\n\nThis vulnerability is often referred to as \"Potential Insecurity in Function - Consider Safer `ast.literal_eval` Usage\". The `ast.literal_eval()` function is a safer alternative to `eval()` as it only evaluates Python literals and does not execute arbitrary code.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `eval()` whenever possible. If you need to evaluate Python literals from a string, use `ast.literal_eval()` instead. Always validate and sanitize input before passing it to any function that executes or evaluates code.\n\n## Source Code Fix Recommendation\n\nReplace:\n\n```python\nvalue = eval(value)\n```\n\nwith:\n\n```python\nimport ast\nvalue = ast.literal_eval(value)\n```\n\n## Library Dependencies\n\nThe `ast` module is part of the Python Standard Library, so no additional library dependencies are required.\n\n## References\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B307"
+                ]
+              }
+            },
+            {
+              "id": "glog-0c5565ae-669a-41f8-91db-09962e28765b",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe vulnerability arises from the use of the `os.chmod()` function in Python with a mode of `0o777`. This sets the permissions of the file specified by `assemblerFileName` to be readable, writable, and executable by all users. This can lead to unauthorized access, modification, or execution of the file by malicious users or software.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should restrict the permissions of the file to only those necessary for its intended use. For example, if the file only needs to be read and written by the user running the script, you could use a mode of `0o600` instead.\n\n## Source Code Fix Recommendation\n\nReplace the vulnerable line of code with the following:\n\n```python\nos.chmod(assemblerFileName, 0o600)\n```\n\n## Library Dependencies\n\nThe code example requires the `os` module, which is part of the Python Standard Library and does not need to be installed separately.\n\n## References\n\n- [CWE-732: Incorrect Permission Assignment for Critical Resource](https://cwe.mitre.org/data/definitions/732.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B103"
+                ]
+              }
+            },
+            {
+              "id": "glog-35c2e926-947d-4072-bd7c-f9ecbc83b27a",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `shell=True` subprocess call security vulnerability in Python occurs when a program allows for the execution of shell commands with user-provided input. This can lead to arbitrary command execution if an attacker is able to inject malicious input. This is a serious security vulnerability as it can lead to remote code execution, data breaches, and other security compromises.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `shell=True` in subprocess calls whenever possible. If shell features are required, ensure that user-provided input is properly sanitized and validated before being used in a subprocess call. \n\n## Source Code Fix Recommendation\n\nInstead of using `shell=True`, use a list of arguments for the subprocess call. This way, the command and its arguments are passed to the system call directly, without being interpreted by the shell. Here's how you can modify the code:\n\n```python\nfrom subprocess import run, PIPE\n\n# Assuming args is a list of arguments\noutput = run(args, stdout=PIPE).stdout.decode().strip()\n```\n\n## Library Dependencies\n\nThe code example requires the `subprocess` module from Python's standard library. No additional library dependencies are required.\n\n## References\n\n- [OWASP Command Injection](https://owasp.org/www-community/attacks/Command_Injection)\n- [CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')](https://cwe.mitre.org/data/definitions/78.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B602"
+                ]
+              }
+            },
+            {
+              "id": "glog-edec020f-7f37-43aa-80ae-0e77c0cc76a7",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential remote code execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should never use `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\ndata = yaml.safe_load(stream)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library:\n\n```bash\npip install pyyaml\n```\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-a2444b00-df31-4e72-959c-c84ef345b781",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential remote code execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should never use `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\ndata = yaml.safe_load(stream)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library:\n\n```bash\npip install pyyaml\n```\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-12feed86-30b3-4dbf-a2b1-858b43211cd5",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential remote code execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should never use `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\nspecs = yaml.safe_load(y)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library:\n\n```bash\npip install pyyaml\n```\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-6117ecf8-4009-412a-92e2-fbbdba0041d2",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential remote code execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should never use `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\ndata = yaml.safe_load(y)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library:\n\n```bash\npip install pyyaml\n```\n\n## OWASP Resources\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-bd64984e-6e42-44db-a26c-26c2dda83cfe",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when the `yaml.load()` function is used without specifying a `Loader=` parameter. This function can execute arbitrary Python commands resulting from the processing of a malicious YAML document. This can lead to a variety of attacks, including remote code execution, which can have serious security implications.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use the `safe_load()` function instead of `load()`. The `safe_load()` function only deserializes simple Python objects like integers or lists, and cannot execute arbitrary code.\n\nIf you need to deserialize more complex Python objects and are aware of the security risks, you can use `load()` with the `SafeLoader` parameter.\n\n## Source Code Fix Recommendation\n\nReplace the vulnerable line of code:\n\n```python\nlogicData = yaml.load(inFile, yamlLoader)\n```\n\nwith the safer alternative:\n\n```python\nlogicData = yaml.safe_load(inFile)\n```\n\nor, if you need to deserialize complex objects:\n\n```python\nlogicData = yaml.load(inFile, Loader=yaml.SafeLoader)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-4b8ecbb0-4641-42ca-9a38-f91b56d25709",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when a program uses the `yaml.load()` function from the PyYAML library to parse untrusted input. This function can execute arbitrary Python commands embedded in the YAML input, leading to a potential remote code execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should never use `yaml.load()` with untrusted input. Instead, use the `yaml.safe_load()` function, which does not execute arbitrary Python commands.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\ndata = yaml.safe_load(stream)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library:\n\n```bash\npip install pyyaml\n```\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            },
+            {
+              "id": "glog-69936d32-0dec-42fe-bc60-f2d7625883a3",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Unsafe YAML Load Vulnerability\" in Python is a security vulnerability that occurs when the `yaml.load()` function is used without specifying a `Loader`. This function can create Python objects and execute arbitrary code, which can lead to Remote Code Execution (RCE) if an attacker is able to control the input to the `yaml.load()` function.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should always use `yaml.safe_load()` instead of `yaml.load()`. The `safe_load` function can only parse a subset of YAML that excludes all the potentially dangerous constructs.\n\n## Source Code Fix Recommendation\n\nReplace the unsafe `yaml.load()` function with the safe `yaml.safe_load()` function:\n\n```python\nimport yaml\n\nwith open('file.yaml', 'r') as f:\n    logicData = yaml.safe_load(f)\n```\n\n## Library Dependencies\n\nThe code example requires the PyYAML library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B506"
+                ]
+              }
+            }
+          ],
+          "language": "en-US",
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "isComprehensive": false
+        }
+      },
+      "language": "en-US",
+      "results": [
+        {
+          "ruleId": "glog-f9843eff-e7aa-42d8-bd40-9a65e3f54d1f",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "HostLibraryTests/configs/ConvertYAML.py"
+                },
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 16,
+                  "endLine": 42,
+                  "endColumn": 30,
+                  "snippet": {
+                    "text": "        data = yaml.load(inf)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 41,
+                  "endLine": 43,
+                  "snippet": {
+                    "text": "    with open(inFiles[0]) as inf:\n        data = yaml.load(inf)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-106a73a8-8334-46be-8133-4508623b2e21",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "HostLibraryTests/configs/ConvertYAML.py"
+                },
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 16,
+                  "endLine": 66,
+                  "endColumn": 33,
+                  "snippet": {
+                    "text": "        data = yaml.load(inFile)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 65,
+                  "endLine": 67,
+                  "snippet": {
+                    "text": "    with open(args[0]) as inFile:\n        data = yaml.load(inFile)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-ee434889-c4d9-45a4-9ebb-34e812ecd1d8",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "HostLibraryTests/LibYamlToMsgpack.py"
+                },
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 16,
+                  "endLine": 36,
+                  "endColumn": 28,
+                  "snippet": {
+                    "text": "        data = yaml.load(f)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 35,
+                  "endLine": 37,
+                  "snippet": {
+                    "text": "    with open(infile) as f:\n        data = yaml.load(f)\n    with open(outfile, 'wb') as f:\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-927103af-c3a3-4490-a316-3224f804fd74",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "HostLibraryTests/configs/ConvertYAML.py"
+                },
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 20,
+                  "endLine": 48,
+                  "endColumn": 34,
+                  "snippet": {
+                    "text": "            data = yaml.load(inf)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 47,
+                  "endLine": 49,
+                  "snippet": {
+                    "text": "        with open(inFile) as inf:\n            data = yaml.load(inf)\n        newLibrary = MasterSolutionLibrary.FromOriginalState(data)\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-3a892611-24f6-44b0-bb27-6b2d2a6323aa",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16.py"
+                },
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 40,
+                  "endLine": 110,
+                  "endColumn": 63,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxVal0\"] = eval(vars[\"cIdxExpr0\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 109,
+                  "endLine": 111,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr0\"] = \"{blockA} + {blockB}*{ThreadTile0} + 0\".format_map(vars)\n                    vars[\"cIdxVal0\"] = eval(vars[\"cIdxExpr0\"])\n                    vars[\"cStr0\"] = \"v[vgprValuC + {cIdxExpr0}]\".format_map(vars)\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-7149f1ef-a5a0-4c77-aacb-dcfd2bdb1cb6",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/BenchmarkSplitter.py"
+                },
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 20,
+                  "endLine": 43,
+                  "endColumn": 44,
+                  "snippet": {
+                    "text": "            data = yaml.load(f, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 42,
+                  "endLine": 44,
+                  "snippet": {
+                    "text": "        with open(benchmarkConfigFile) as f:\n            data = yaml.load(f, yamlLoader)\n        return data\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-c92ed013-de1c-4b1e-860c-8ee9cf2ef875",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecurity in Function - Consider Safer ast.literal_eval Usage"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16.py"
+                },
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 40,
+                  "endLine": 115,
+                  "endColumn": 63,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxVal1\"] = eval(vars[\"cIdxExpr1\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 114,
+                  "endLine": 116,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr1\"] = \"{blockA} + {blockB}*{ThreadTile0} + {Half_ThreadTile0}\".format_map(vars)\n                    vars[\"cIdxVal1\"] = eval(vars[\"cIdxExpr1\"])\n                    vars[\"cStr1\"] = \"v[vgprValuC + {cIdxExpr1}]\".format_map(vars)\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-2fea8236-f93e-43af-9356-f2bc08b4d638",
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "File (runScriptName) Vulnerable Due to Permissive Chmod Mask 0o777"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/ClientWriter.py"
+                },
+                "region": {
+                  "startLine": 253,
+                  "startColumn": 5,
+                  "endLine": 253,
+                  "endColumn": 35,
+                  "snippet": {
+                    "text": "    os.chmod(runScriptName, 0o777)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 252,
+                  "endLine": 254,
+                  "snippet": {
+                    "text": "  if os.name != \"nt\":\n    os.chmod(runScriptName, 0o777)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "HIGH",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-a65c4467-954b-4478-9779-4dabdeeab60c",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16.py"
+                },
+                "region": {
+                  "startLine": 162,
+                  "startColumn": 39,
+                  "endLine": 162,
+                  "endColumn": 61,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxVal\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 161,
+                  "endLine": 163,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr\"] = \"{blockA} + {blockB}*{ThreadTile0} + 0\".format_map(vars)\n                    vars[\"cIdxVal\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-562b0fe2-fd73-4d0f-825b-adff39e84f90",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16.py"
+                },
+                "region": {
+                  "startLine": 175,
+                  "startColumn": 39,
+                  "endLine": 175,
+                  "endColumn": 61,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxVal\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 174,
+                  "endLine": 176,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr\"] = \"{blockA} + {blockB}*{ThreadTile0} + {Half_ThreadTile0}\".format_map(vars)\n                    vars[\"cIdxVal\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-e59a6570-d391-4eab-aec2-a51e9cb04344",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 32,
+                  "endLine": 91,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 90,
+                  "endLine": 92,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + 0*2 + 1\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-795d0f8a-aa0f-4e12-a6fd-343531fe4e14",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 32,
+                  "endLine": 77,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 76,
+                  "endLine": 78,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + 0*2 + 0\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-13a54890-b518-4edd-95e5-ab91e020c680",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 102,
+                  "startColumn": 32,
+                  "endLine": 102,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 101,
+                  "endLine": 103,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + {Half_ThreadTile0}*2 + 0\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-9f00aa7c-8d6a-4c1f-aafd-c5a4661bbaf3",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 32,
+                  "endLine": 114,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 113,
+                  "endLine": 115,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + {Half_ThreadTile0}*2+1\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-88db6868-1896-4965-ade3-6a07fb8fcabe",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 173,
+                  "startColumn": 36,
+                  "endLine": 173,
+                  "endColumn": 58,
+                  "snippet": {
+                    "text": "                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 172,
+                  "endLine": 174,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr\"] = \"{block0}*2 + {block1}*{ThreadTile0}*2 + 0*2 + 0\".format_map(vars)\n                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-e2573449-b639-4057-a6a9-4ccb9424eb87",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 183,
+                  "startColumn": 36,
+                  "endLine": 183,
+                  "endColumn": 58,
+                  "snippet": {
+                    "text": "                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 182,
+                  "endLine": 184,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr\"] = \"{block0}*2 + {block1}*{ThreadTile0}*2 + 0*2 + 1\".format_map(vars)\n                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-29eada07-2dfe-4f4c-88fc-29c49338b0c4",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 190,
+                  "startColumn": 36,
+                  "endLine": 190,
+                  "endColumn": 58,
+                  "snippet": {
+                    "text": "                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 189,
+                  "endLine": 191,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr\"] = \"{block0}*2 + {block1}*{ThreadTile0}*2 + {Half_ThreadTile0}*2 + 0\".format_map(vars)\n                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-5403c709-aab7-4bfd-8df0-9bb75d64079e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 197,
+                  "startColumn": 36,
+                  "endLine": 197,
+                  "endColumn": 58,
+                  "snippet": {
+                    "text": "                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 196,
+                  "endLine": 198,
+                  "snippet": {
+                    "text": "                    vars[\"cIdxExpr\"] = \"{block0}*2+{block1}*{ThreadTile0}*2+{Half_ThreadTile0}*2+1\".format_map(vars)\n                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-008b67e6-ac57-466d-ad27-3dc0f801a91b",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 268,
+                  "startColumn": 32,
+                  "endLine": 268,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 267,
+                  "endLine": 269,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + 0*2 + 1\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-7de37e1e-b776-4e6f-bc2f-337f258ee0c7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 254,
+                  "startColumn": 32,
+                  "endLine": 254,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 253,
+                  "endLine": 255,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + 0*2 + 0\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-23d5741e-7cba-4fb0-a86d-98be055a4cea",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 280,
+                  "startColumn": 32,
+                  "endLine": 280,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 279,
+                  "endLine": 281,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + {Half_ThreadTile0}*2 + 0\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-9db6123e-edb7-477d-bee8-cd68b25b3fb6",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py"
+                },
+                "region": {
+                  "startLine": 292,
+                  "startColumn": 32,
+                  "endLine": 292,
+                  "endColumn": 54,
+                  "snippet": {
+                    "text": "                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 291,
+                  "endLine": 293,
+                  "snippet": {
+                    "text": "                vars[\"cIdxExpr\"] = \"{blockA}*2 + {blockB}*{ThreadTile0}*2 + {Half_ThreadTile0}*2 + 1\".format_map(vars)\n                vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-e7e7099f-a9dd-463a-abcc-1072e92dbdbe",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_I8_HPA.py"
+                },
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 32,
+                  "endLine": 57,
+                  "endColumn": 45,
+                  "snippet": {
+                    "text": "                        cIdx = eval(cIdxStr)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 56,
+                  "endLine": 58,
+                  "snippet": {
+                    "text": "                        cIdxStr = f'{blockA}*{inTSize} + {blockB}*{inTSize}*{ThreadTile0} + {indexB}*{ThreadTile0} + {indexA}'\n                        cIdx = eval(cIdxStr)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-1bffb4c0-fc11-4984-92bd-bbea82300359",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/CustomKernels.py"
+                },
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 16,
+                  "endLine": 64,
+                  "endColumn": 48,
+                  "snippet": {
+                    "text": "        return yaml.load(rawConfig, yamlLoader)[\"custom.config\"]\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 63,
+                  "endLine": 65,
+                  "snippet": {
+                    "text": "    try:\n        return yaml.load(rawConfig, yamlLoader)[\"custom.config\"]\n    except yaml.scanner.ScannerError as e:\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-5d690f3b-72f5-4ead-a3b9-e69d82de548e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/GenerateSummations.py"
+                },
+                "region": {
+                  "startLine": 144,
+                  "startColumn": 26,
+                  "endLine": 144,
+                  "endColumn": 55,
+                  "snippet": {
+                    "text": "        tensileLibrary = yaml.load(stream, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 143,
+                  "endLine": 145,
+                  "snippet": {
+                    "text": "        stream = open(tensileLibraryFile, \"r\")\n        tensileLibrary = yaml.load(stream, yamlLoader)\n        stream.close()\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-1282cd2d-5521-4bdb-ac90-2bc1c345c597",
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "File Permission Vulnerability due to Chmod 0o777 Setting on bytearrayFileName"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/KernelWriter.py"
+                },
+                "region": {
+                  "startLine": 5340,
+                  "startColumn": 7,
+                  "endLine": 5340,
+                  "endColumn": 41,
+                  "snippet": {
+                    "text": "      os.chmod(bytearrayFileName, 0o777)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 5339,
+                  "endLine": 5341,
+                  "snippet": {
+                    "text": "        bytearrayFile.write(self.byteArrayScriptSource())\n      os.chmod(bytearrayFileName, 0o777)\n    return bytearrayFileName\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "HIGH",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-436d4767-280e-43e6-8dc9-f6ec925aec5f",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecure Function Use - Consider Safer ast.literal_eval."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/KernelWriterAssembly.py"
+                },
+                "region": {
+                  "startLine": 9607,
+                  "startColumn": 63,
+                  "endLine": 9607,
+                  "endColumn": 77,
+                  "snippet": {
+                    "text": "              replacedCode[:valStartPos] + str( min(maxVmcnt, eval(valueStr)) ) + \")\", \\\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 9606,
+                  "endLine": 9608,
+                  "snippet": {
+                    "text": "            replacedCode = \"%-50s // %s \\n\" %( \\\n              replacedCode[:valStartPos] + str( min(maxVmcnt, eval(valueStr)) ) + \")\", \\\n              (\"min(maxVmcnt, (%s))\"%valueStr) \\\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-936d7313-830e-4372-a6d6-89ec875fe36f",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/LibraryIO.py"
+                },
+                "region": {
+                  "startLine": 124,
+                  "startColumn": 16,
+                  "endLine": 124,
+                  "endColumn": 40,
+                  "snippet": {
+                    "text": "        data = yaml.load(f, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 123,
+                  "endLine": 125,
+                  "snippet": {
+                    "text": "    with open(filename, \"r\") as f:\n        data = yaml.load(f, yamlLoader)\n    return data\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-e8a2105e-2dc0-4e66-9cdc-2307da40f33c",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecurity in Function - Consider Safer ast.literal_eval Usage"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Tensile.py"
+                },
+                "region": {
+                  "startLine": 108,
+                  "startColumn": 17,
+                  "endLine": 108,
+                  "endColumn": 28,
+                  "snippet": {
+                    "text": "        value = eval(value)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 107,
+                  "endLine": 109,
+                  "snippet": {
+                    "text": "        (key, value) = par.split(\"=\")\n        value = eval(value)\n        return (key, value)\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-68c0d879-d0af-4a4a-99bf-68b3430b771d",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecurity in Function - Consider Safer ast.literal_eval Usage"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/TensileBenchmarkCluster.py"
+                },
+                "region": {
+                  "startLine": 335,
+                  "startColumn": 21,
+                  "endLine": 335,
+                  "endColumn": 32,
+                  "snippet": {
+                    "text": "            value = eval(value)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 334,
+                  "endLine": 336,
+                  "snippet": {
+                    "text": "            (key, value) = par.split(\"=\")\n            value = eval(value)\n            return (key, value)\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-c2de2b49-3b1d-410b-bc56-3f204d36b4fa",
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "\"Shell=True in Subprocess Call Security Vulnerability\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/TensileBenchmarkLibraryClient.py"
+                },
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 13,
+                  "endLine": 41,
+                  "endColumn": 48,
+                  "snippet": {
+                    "text": "  process = Popen(cmd, stdout=PIPE, shell=True)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 40,
+                  "endLine": 42,
+                  "snippet": {
+                    "text": "  sys.stderr.write(\"\\n\")\n  process = Popen(cmd, stdout=PIPE, shell=True)\n  stdout = process.communicate()[0]\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "HIGH",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-a2e2eed8-daed-442d-85de-30db9fd7869a",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Potential Insecurity in Function - Consider Safer ast.literal_eval Usage"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/TensileCreateLib/ParseArguments.py"
+                },
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 13,
+                  "endLine": 45,
+                  "endColumn": 24,
+                  "snippet": {
+                    "text": "    value = eval(value)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 44,
+                  "endLine": 46,
+                  "snippet": {
+                    "text": "    (key, value) = par.split(\"=\")\n    value = eval(value)\n    return (key, value)\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-0c5565ae-669a-41f8-91db-09962e28765b",
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "File Permission Vulnerability in Chmod 0o777 Setting on (assemblerFileName)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/TensileCreateLibrary.py"
+                },
+                "region": {
+                  "startLine": 178,
+                  "startColumn": 5,
+                  "endLine": 178,
+                  "endColumn": 39,
+                  "snippet": {
+                    "text": "    os.chmod(assemblerFileName, 0o777)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 177,
+                  "endLine": 179,
+                  "snippet": {
+                    "text": "            assemblerFile.write(\"copy %f%.co ..\\..\\..\\library\\%f%_%h%.co\\n\")\n    os.chmod(assemblerFileName, 0o777)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "HIGH",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-35c2e926-947d-4072-bd7c-f9ecbc83b27a",
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "\"Shell=True Subprocess Call Security Vulnerability Detected\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Utilities/Toolchain.py"
+                },
+                "region": {
+                  "startLine": 275,
+                  "startColumn": 18,
+                  "endLine": 275,
+                  "endColumn": 52,
+                  "snippet": {
+                    "text": "        output = run(args, stdout=PIPE, shell=True).stdout.decode().strip()\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 274,
+                  "endLine": 276,
+                  "snippet": {
+                    "text": "    try:\n        output = run(args, stdout=PIPE, shell=True).stdout.decode().strip()\n        match = re.search(regex, output, re.IGNORECASE)\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "HIGH",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-edec020f-7f37-43aa-80ae-0e77c0cc76a7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Utilities/archive/merge_rocblas_yaml_files.py"
+                },
+                "region": {
+                  "startLine": 69,
+                  "startColumn": 14,
+                  "endLine": 69,
+                  "endColumn": 43,
+                  "snippet": {
+                    "text": "      data = yaml.load(stream, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 68,
+                  "endLine": 70,
+                  "snippet": {
+                    "text": "        printExit(\"Cannot open file: %s\" % filename )\n      data = yaml.load(stream, yamlLoader)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-a2444b00-df31-4e72-959c-c84ef345b781",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Utilities/merge.py"
+                },
+                "region": {
+                  "startLine": 139,
+                  "startColumn": 12,
+                  "endLine": 139,
+                  "endColumn": 41,
+                  "snippet": {
+                    "text": "    data = yaml.load(stream, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 138,
+                  "endLine": 140,
+                  "snippet": {
+                    "text": "        sys.exit(-1)\n    data = yaml.load(stream, yamlLoader)\n    return data\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-12feed86-30b3-4dbf-a2b1-858b43211cd5",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tuning/automation/ConvertToEfficiency.py"
+                },
+                "region": {
+                  "startLine": 81,
+                  "startColumn": 17,
+                  "endLine": 81,
+                  "endColumn": 41,
+                  "snippet": {
+                    "text": "        specs = yaml.load(y, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 80,
+                  "endLine": 82,
+                  "snippet": {
+                    "text": "    with open(args.specs) as y:\n        specs = yaml.load(y, yamlLoader)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-6117ecf8-4009-412a-92e2-fbbdba0041d2",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tuning/automation/ConvertToEfficiency.py"
+                },
+                "region": {
+                  "startLine": 94,
+                  "startColumn": 24,
+                  "endLine": 94,
+                  "endColumn": 48,
+                  "snippet": {
+                    "text": "                data = yaml.load(y, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 93,
+                  "endLine": 95,
+                  "snippet": {
+                    "text": "\n                data = yaml.load(y, yamlLoader)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-bd64984e-6e42-44db-a26c-26c2dda83cfe",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tuning/automation/RemoveSizes.py"
+                },
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 21,
+                  "endLine": 61,
+                  "endColumn": 50,
+                  "snippet": {
+                    "text": "        logicData = yaml.load(inFile, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 60,
+                  "endLine": 62,
+                  "snippet": {
+                    "text": "    with open(args.inLogic) as inFile:\n        logicData = yaml.load(inFile, yamlLoader)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-4b8ecbb0-4641-42ca-9a38-f91b56d25709",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tuning/automation/TuningConfiguration.py"
+                },
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 20,
+                  "endLine": 126,
+                  "endColumn": 49,
+                  "snippet": {
+                    "text": "            data = yaml.load(stream, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 125,
+                  "endLine": 127,
+                  "snippet": {
+                    "text": "\n            data = yaml.load(stream, yamlLoader)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-69936d32-0dec-42fe-bc60-f2d7625883a3",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Unsafe YAML Load Vulnerability"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tuning/automation/rocblas-benchInputCreator.py"
+                },
+                "region": {
+                  "startLine": 333,
+                  "startColumn": 25,
+                  "endLine": 333,
+                  "endColumn": 49,
+                  "snippet": {
+                    "text": "            logicData = yaml.load(f, yamlLoader)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 332,
+                  "endLine": 334,
+                  "snippet": {
+                    "text": "        with open(yamlName) as f:\n            logicData = yaml.load(f, yamlLoader)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        }
+      ],
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ]
+    }
+  ]
+}
