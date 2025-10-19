@@ -132,30 +132,6 @@
               }
             },
             {
-              "id": "952fff37-74c8-3bbf-a2fd-feabf4a1d9db",
-              "name": "resources.rules.avoid-pyyaml-load",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.avoid-pyyaml-load"
-              },
-              "fullDescription": {
-                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation](https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation)\n - [https://nvd.nist.gov/vuln/detail/CVE-2017-18342](https://nvd.nist.gov/vuln/detail/CVE-2017-18342)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.avoid-pyyaml-load"
-                ]
-              }
-            },
-            {
               "id": "efafbb4a-a8e2-3366-8e75-c4ac53a7360e",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
@@ -176,6 +152,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.raptor-signed-unsigned-conversion"
+                ]
+              }
+            },
+            {
+              "id": "952fff37-74c8-3bbf-a2fd-feabf4a1d9db",
+              "name": "resources.rules.avoid-pyyaml-load",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.avoid-pyyaml-load"
+              },
+              "fullDescription": {
+                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation](https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation)\n - [https://nvd.nist.gov/vuln/detail/CVE-2017-18342](https://nvd.nist.gov/vuln/detail/CVE-2017-18342)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.avoid-pyyaml-load"
                 ]
               }
             },
@@ -396,30 +396,6 @@
               }
             },
             {
-              "id": "d647d5b3-8a75-3d14-a93a-fe2a87ee15c3",
-              "name": "resources.rules.raptor-interesting-api-calls",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
-              },
-              "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
-                ]
-              }
-            },
-            {
               "id": "c6b655fc-4fce-3082-bbaa-b88319917840",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
@@ -444,7 +420,7 @@
               }
             },
             {
-              "id": "a5e7a05d-46b7-35fc-b6ec-a9558bf20dc5",
+              "id": "d647d5b3-8a75-3d14-a93a-fe2a87ee15c3",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
@@ -469,6 +445,30 @@
             },
             {
               "id": "4f2e7ee9-d7f5-383b-8b4b-7f3afd956610",
+              "name": "resources.rules.raptor-interesting-api-calls",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+              },
+              "fullDescription": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-interesting-api-calls"
+                ]
+              }
+            },
+            {
+              "id": "a5e7a05d-46b7-35fc-b6ec-a9558bf20dc5",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
@@ -684,7 +684,7 @@
               }
             },
             {
-              "id": "3d2bd9fc-f5bf-3c22-954c-7387a9b8f75b",
+              "id": "de9f83b2-56fb-3aaa-ae44-25281adbd5cc",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -708,7 +708,7 @@
               }
             },
             {
-              "id": "de9f83b2-56fb-3aaa-ae44-25281adbd5cc",
+              "id": "3d2bd9fc-f5bf-3c22-954c-7387a9b8f75b",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -780,6 +780,30 @@
               }
             },
             {
+              "id": "fed8bed7-f971-3a98-9266-ac6b052f573f",
+              "name": "resources.rules.raptor-signed-unsigned-conversion",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
+              },
+              "fullDescription": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/195](https://cwe.mitre.org/data/definitions/195)\n - [https://cwe.mitre.org/data/definitions/196](https://cwe.mitre.org/data/definitions/196)\n - [https://cwe.mitre.org/data/definitions/194](https://cwe.mitre.org/data/definitions/194)\n - [https://cwe.mitre.org/data/definitions/191](https://cwe.mitre.org/data/definitions/191)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://cwe.mitre.org/data/definitions/789](https://cwe.mitre.org/data/definitions/789)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [http://www.phrack.org/issues/60/10.html#article](http://www.phrack.org/issues/60/10.html#article)\n - [https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples](https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-signed-unsigned-conversion"
+                ]
+              }
+            },
+            {
               "id": "c8dc38fe-e1a9-32d9-9b7c-473a2609285e",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
@@ -804,7 +828,7 @@
               }
             },
             {
-              "id": "fed8bed7-f971-3a98-9266-ac6b052f573f",
+              "id": "2db15fa5-83a8-3fc1-a1d5-290a695c23f7",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -852,26 +876,26 @@
               }
             },
             {
-              "id": "2db15fa5-83a8-3fc1-a1d5-290a695c23f7",
-              "name": "resources.rules.raptor-signed-unsigned-conversion",
+              "id": "afd7182d-81c1-3365-87a6-14a3305cdad8",
+              "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
               },
               "fullDescription": {
-                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
               },
               "defaultConfiguration": {
                 "enabled": true,
                 "level": "warning"
               },
               "help": {
-                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/195](https://cwe.mitre.org/data/definitions/195)\n - [https://cwe.mitre.org/data/definitions/196](https://cwe.mitre.org/data/definitions/196)\n - [https://cwe.mitre.org/data/definitions/194](https://cwe.mitre.org/data/definitions/194)\n - [https://cwe.mitre.org/data/definitions/191](https://cwe.mitre.org/data/definitions/191)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://cwe.mitre.org/data/definitions/789](https://cwe.mitre.org/data/definitions/789)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [http://www.phrack.org/issues/60/10.html#article](http://www.phrack.org/issues/60/10.html#article)\n - [https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples](https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples)\n"
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-signed-unsigned-conversion"
+                  "resources.rules.raptor-interesting-api-calls"
                 ]
               }
             },
@@ -900,26 +924,26 @@
               }
             },
             {
-              "id": "afd7182d-81c1-3365-87a6-14a3305cdad8",
-              "name": "resources.rules.raptor-interesting-api-calls",
+              "id": "11a555fa-8321-378a-9f1c-bf23f390ebfe",
+              "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
               },
               "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
               },
               "defaultConfiguration": {
                 "enabled": true,
                 "level": "warning"
               },
               "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
+                  "resources.rules.dangerous-subprocess-use"
                 ]
               }
             },
@@ -944,30 +968,6 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.avoid-pyyaml-load"
-                ]
-              }
-            },
-            {
-              "id": "11a555fa-8321-378a-9f1c-bf23f390ebfe",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
                 ]
               }
             },
@@ -1020,7 +1020,7 @@
               }
             },
             {
-              "id": "aad2e298-cfa7-39f9-9bcc-33f5a7851349",
+              "id": "bfdebe9d-ee5e-3e68-b1fa-3b334d6976a0",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -1044,7 +1044,7 @@
               }
             },
             {
-              "id": "bfdebe9d-ee5e-3e68-b1fa-3b334d6976a0",
+              "id": "aad2e298-cfa7-39f9-9bcc-33f5a7851349",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -1116,7 +1116,7 @@
               }
             },
             {
-              "id": "897c9f47-de02-370d-80a4-6f85ac693f32",
+              "id": "3f28dbb9-38c2-3598-b55c-1523a83f8fdf",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -1140,7 +1140,7 @@
               }
             },
             {
-              "id": "3f28dbb9-38c2-3598-b55c-1523a83f8fdf",
+              "id": "897c9f47-de02-370d-80a4-6f85ac693f32",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -1308,30 +1308,6 @@
               }
             },
             {
-              "id": "22541440-794d-34dd-a5c1-52913b9fd5ff",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
-                ]
-              }
-            },
-            {
               "id": "d2ed8019-42e5-3301-85b5-5778a4bc445b",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
@@ -1352,6 +1328,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "22541440-794d-34dd-a5c1-52913b9fd5ff",
+              "name": "resources.rules.dangerous-subprocess-use",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
+              },
+              "fullDescription": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dangerous-subprocess-use"
                 ]
               }
             },
@@ -1380,7 +1380,7 @@
               }
             },
             {
-              "id": "1dc06561-2a8d-3687-99c8-c362d22d4a20",
+              "id": "401ba57f-1bfc-365c-b3ac-5c9e45e137b3",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -1404,7 +1404,7 @@
               }
             },
             {
-              "id": "401ba57f-1bfc-365c-b3ac-5c9e45e137b3",
+              "id": "1dc06561-2a8d-3687-99c8-c362d22d4a20",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -1652,30 +1652,6 @@
               }
             },
             {
-              "id": "bb352fd0-c4e3-3a93-8d17-eb84492fca54",
-              "name": "resources.rules.return-not-in-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.return-not-in-function"
-              },
-              "fullDescription": {
-                "text": "`return` only makes sense inside a function"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.return-not-in-function"
-                ]
-              }
-            },
-            {
               "id": "46d447ef-40bf-3901-8c81-e27cfc8fb1b5",
               "name": "python.lang.security.audit.eval-detected.eval-detected",
               "shortDescription": {
@@ -1697,6 +1673,30 @@
                 "precision": "very-high",
                 "tags": [
                   "python.lang.security.audit.eval-detected.eval-detected"
+                ]
+              }
+            },
+            {
+              "id": "bb352fd0-c4e3-3a93-8d17-eb84492fca54",
+              "name": "resources.rules.return-not-in-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-not-in-function"
+              },
+              "fullDescription": {
+                "text": "`return` only makes sense inside a function"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-not-in-function"
                 ]
               }
             },
@@ -1751,6 +1751,30 @@
               }
             },
             {
+              "id": "71476bb8-ee90-3939-b99c-0447f8612bfc",
+              "name": "resources.rules.return-not-in-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-not-in-function"
+              },
+              "fullDescription": {
+                "text": "`return` only makes sense inside a function"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-not-in-function"
+                ]
+              }
+            },
+            {
               "id": "d6738613-8d0a-330d-be6f-fbe167158ab6",
               "name": "python.lang.security.audit.eval-detected.eval-detected",
               "shortDescription": {
@@ -1772,30 +1796,6 @@
                 "precision": "very-high",
                 "tags": [
                   "python.lang.security.audit.eval-detected.eval-detected"
-                ]
-              }
-            },
-            {
-              "id": "71476bb8-ee90-3939-b99c-0447f8612bfc",
-              "name": "resources.rules.return-not-in-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.return-not-in-function"
-              },
-              "fullDescription": {
-                "text": "`return` only makes sense inside a function"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.return-not-in-function"
                 ]
               }
             },
@@ -2045,7 +2045,7 @@
               }
             },
             {
-              "id": "dfbb7b6b-8e04-3a31-a761-ce3cd833403a",
+              "id": "2a89a074-d8d4-378a-8185-3d56b9014c0f",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -2069,7 +2069,7 @@
               }
             },
             {
-              "id": "2a89a074-d8d4-378a-8185-3d56b9014c0f",
+              "id": "dfbb7b6b-8e04-3a31-a761-ce3cd833403a",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -3894,7 +3894,7 @@
               }
             },
             {
-              "id": "6a85b07d-9bfe-3e38-96d3-66c94f2c3b3e",
+              "id": "187c50f2-f979-35e6-8276-95ad8ec3c9ad",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -3918,7 +3918,7 @@
               }
             },
             {
-              "id": "187c50f2-f979-35e6-8276-95ad8ec3c9ad",
+              "id": "6a85b07d-9bfe-3e38-96d3-66c94f2c3b3e",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -3967,6 +3967,30 @@
             },
             {
               "id": "fe397297-5531-30d6-bfed-a80316040eba",
+              "name": "resources.rules.raptor-signed-unsigned-conversion",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
+              },
+              "fullDescription": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/195](https://cwe.mitre.org/data/definitions/195)\n - [https://cwe.mitre.org/data/definitions/196](https://cwe.mitre.org/data/definitions/196)\n - [https://cwe.mitre.org/data/definitions/194](https://cwe.mitre.org/data/definitions/194)\n - [https://cwe.mitre.org/data/definitions/191](https://cwe.mitre.org/data/definitions/191)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://cwe.mitre.org/data/definitions/789](https://cwe.mitre.org/data/definitions/789)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [http://www.phrack.org/issues/60/10.html#article](http://www.phrack.org/issues/60/10.html#article)\n - [https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples](https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-signed-unsigned-conversion"
+                ]
+              }
+            },
+            {
+              "id": "f90c8b0e-1d3b-3d78-a31f-11aff9d3210c",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -4158,7 +4182,7 @@
               }
             },
             {
-              "id": "6be730d3-16b4-3d67-89e6-986fad5586e7",
+              "id": "faf73247-ee20-3849-8d7a-81c5104a969a",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -4182,7 +4206,7 @@
               }
             },
             {
-              "id": "faf73247-ee20-3849-8d7a-81c5104a969a",
+              "id": "6be730d3-16b4-3d67-89e6-986fad5586e7",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -4350,30 +4374,6 @@
               }
             },
             {
-              "id": "02bb6af2-6090-3800-821d-4343b328d36f",
-              "name": "resources.rules.raptor-interesting-api-calls",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
-              },
-              "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
-                ]
-              }
-            },
-            {
               "id": "7d7ff3db-a66a-3278-8580-a4136b1647f8",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
@@ -4394,6 +4394,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.raptor-signed-unsigned-conversion"
+                ]
+              }
+            },
+            {
+              "id": "02bb6af2-6090-3800-821d-4343b328d36f",
+              "name": "resources.rules.raptor-interesting-api-calls",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+              },
+              "fullDescription": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-interesting-api-calls"
                 ]
               }
             },
@@ -4446,30 +4470,6 @@
               }
             },
             {
-              "id": "b45c68ab-653a-30e2-9cae-9346db9e056e",
-              "name": "resources.rules.raptor-interesting-api-calls",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
-              },
-              "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
-                ]
-              }
-            },
-            {
               "id": "f40af28f-5f54-3b72-907d-e6543987db00",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
@@ -4490,6 +4490,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.raptor-signed-unsigned-conversion"
+                ]
+              }
+            },
+            {
+              "id": "b45c68ab-653a-30e2-9cae-9346db9e056e",
+              "name": "resources.rules.raptor-interesting-api-calls",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+              },
+              "fullDescription": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-interesting-api-calls"
                 ]
               }
             },
@@ -4662,6 +4686,30 @@
               }
             },
             {
+              "id": "21e64154-0b39-3ddc-ad30-a4e88d92ae0e",
+              "name": "resources.rules.raptor-signed-unsigned-conversion",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
+              },
+              "fullDescription": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/195](https://cwe.mitre.org/data/definitions/195)\n - [https://cwe.mitre.org/data/definitions/196](https://cwe.mitre.org/data/definitions/196)\n - [https://cwe.mitre.org/data/definitions/194](https://cwe.mitre.org/data/definitions/194)\n - [https://cwe.mitre.org/data/definitions/191](https://cwe.mitre.org/data/definitions/191)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://cwe.mitre.org/data/definitions/789](https://cwe.mitre.org/data/definitions/789)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [http://www.phrack.org/issues/60/10.html#article](http://www.phrack.org/issues/60/10.html#article)\n - [https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples](https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-signed-unsigned-conversion"
+                ]
+              }
+            },
+            {
               "id": "e95152f2-9480-39bc-a473-3e2286ce8d9c",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
@@ -4807,6 +4855,30 @@
               }
             },
             {
+              "id": "f148e215-42e4-395f-86f0-ad9909510e0d",
+              "name": "resources.rules.dangerous-subprocess-use",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
+              },
+              "fullDescription": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dangerous-subprocess-use"
+                ]
+              }
+            },
+            {
               "id": "0e5aea10-5e4a-35ff-a692-115d12b66c90",
               "name": "python.lang.security.audit.eval-detected.eval-detected",
               "shortDescription": {
@@ -4880,6 +4952,30 @@
               }
             },
             {
+              "id": "28aaa62f-e3a1-3205-9463-c9afb7340741",
+              "name": "resources.rules.open-never-closed",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.open-never-closed"
+              },
+              "fullDescription": {
+                "text": "file object opened without corresponding close"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "file object opened without corresponding close\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "file object opened without corresponding close\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.open-never-closed"
+                ]
+              }
+            },
+            {
               "id": "b536f2ef-0c85-32fc-a78a-3095a5ea45f4",
               "name": "python.lang.security.audit.eval-detected.eval-detected",
               "shortDescription": {
@@ -4901,30 +4997,6 @@
                 "precision": "very-high",
                 "tags": [
                   "python.lang.security.audit.eval-detected.eval-detected"
-                ]
-              }
-            },
-            {
-              "id": "28aaa62f-e3a1-3205-9463-c9afb7340741",
-              "name": "resources.rules.open-never-closed",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.open-never-closed"
-              },
-              "fullDescription": {
-                "text": "file object opened without corresponding close"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "file object opened without corresponding close\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "file object opened without corresponding close\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.open-never-closed"
                 ]
               }
             },
@@ -5553,30 +5625,6 @@
               }
             },
             {
-              "id": "0b92b0d1-8c73-3525-aa58-9e1b301d4861",
-              "name": "resources.rules.avoid-pyyaml-load",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.avoid-pyyaml-load"
-              },
-              "fullDescription": {
-                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation](https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation)\n - [https://nvd.nist.gov/vuln/detail/CVE-2017-18342](https://nvd.nist.gov/vuln/detail/CVE-2017-18342)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.avoid-pyyaml-load"
-                ]
-              }
-            },
-            {
               "id": "a0faf189-5f18-31df-abed-a796244c1c2f",
               "name": "resources.rules.open-never-closed",
               "shortDescription": {
@@ -5597,6 +5645,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.open-never-closed"
+                ]
+              }
+            },
+            {
+              "id": "0b92b0d1-8c73-3525-aa58-9e1b301d4861",
+              "name": "resources.rules.avoid-pyyaml-load",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.avoid-pyyaml-load"
+              },
+              "fullDescription": {
+                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation](https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation)\n - [https://nvd.nist.gov/vuln/detail/CVE-2017-18342](https://nvd.nist.gov/vuln/detail/CVE-2017-18342)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.avoid-pyyaml-load"
                 ]
               }
             },
@@ -5745,7 +5817,7 @@
               }
             },
             {
-              "id": "792feffb-bfa7-39f9-8a6e-c57d9be34893",
+              "id": "46e065fa-e9fa-3b25-af75-f24ce65a32a8",
               "name": "resources.rules.avoid-pyyaml-load",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.avoid-pyyaml-load"
@@ -5769,7 +5841,7 @@
               }
             },
             {
-              "id": "46e065fa-e9fa-3b25-af75-f24ce65a32a8",
+              "id": "792feffb-bfa7-39f9-8a6e-c57d9be34893",
               "name": "resources.rules.avoid-pyyaml-load",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.avoid-pyyaml-load"
@@ -5865,6 +5937,30 @@
               }
             },
             {
+              "id": "5e8ad424-93cf-38e4-bc0d-9fe68e6a5d0d",
+              "name": "resources.rules.dangerous-subprocess-use",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
+              },
+              "fullDescription": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dangerous-subprocess-use"
+                ]
+              }
+            },
+            {
               "id": "15aa211f-9c48-3bbb-8b79-074979f91f9d",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
@@ -5909,6 +6005,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "571645eb-3201-30dd-80d4-0224f8e778ad",
+              "name": "resources.rules.open-never-closed",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.open-never-closed"
+              },
+              "fullDescription": {
+                "text": "file object opened without corresponding close"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "file object opened without corresponding close\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "file object opened without corresponding close\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.open-never-closed"
                 ]
               }
             },
@@ -5985,30 +6105,6 @@
               }
             },
             {
-              "id": "ca9dc843-0b22-3c96-acb6-76f0be8781da",
-              "name": "resources.rules.missing-pip-no-cache-dir",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.missing-pip-no-cache-dir"
-              },
-              "fullDescription": {
-                "text": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "note"
-              },
-              "help": {
-                "text": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/hadolint/hadolint/wiki/DL3042](https://github.com/hadolint/hadolint/wiki/DL3042)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.missing-pip-no-cache-dir"
-                ]
-              }
-            },
-            {
               "id": "d7a0022c-bfd0-3c5b-b54f-4ad1b5ebaf18",
               "name": "resources.rules.remove-package-cache",
               "shortDescription": {
@@ -6029,6 +6125,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.remove-package-cache"
+                ]
+              }
+            },
+            {
+              "id": "ca9dc843-0b22-3c96-acb6-76f0be8781da",
+              "name": "resources.rules.missing-pip-no-cache-dir",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.missing-pip-no-cache-dir"
+              },
+              "fullDescription": {
+                "text": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "note"
+              },
+              "help": {
+                "text": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/hadolint/hadolint/wiki/DL3042](https://github.com/hadolint/hadolint/wiki/DL3042)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.missing-pip-no-cache-dir"
                 ]
               }
             },
@@ -6105,6 +6225,30 @@
               }
             },
             {
+              "id": "9bd1a224-2d09-3f1c-ba34-872110b39bac",
+              "name": "resources.rules.missing-pip-no-cache-dir",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.missing-pip-no-cache-dir"
+              },
+              "fullDescription": {
+                "text": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "note"
+              },
+              "help": {
+                "text": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "This '$PIP install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/hadolint/hadolint/wiki/DL3042](https://github.com/hadolint/hadolint/wiki/DL3042)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.missing-pip-no-cache-dir"
+                ]
+              }
+            },
+            {
               "id": "fe8d00c0-7d10-3beb-ba11-ddf7f3807367",
               "name": "resources.rules.use-workdir",
               "shortDescription": {
@@ -6153,30 +6297,6 @@
               }
             },
             {
-              "id": "3625b582-d3da-32fb-a7d3-52e7c8124fa7",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
-                ]
-              }
-            },
-            {
               "id": "77b8fb3f-1012-3d88-89ea-5cbaa7f00410",
               "name": "resources.rules.string-concat-in-list",
               "shortDescription": {
@@ -6197,6 +6317,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.string-concat-in-list"
+                ]
+              }
+            },
+            {
+              "id": "3625b582-d3da-32fb-a7d3-52e7c8124fa7",
+              "name": "resources.rules.dangerous-subprocess-use",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
+              },
+              "fullDescription": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dangerous-subprocess-use"
                 ]
               }
             },
@@ -6607,37 +6751,6 @@
           "properties": {}
         },
         {
-          "ruleId": "952fff37-74c8-3bbf-a2fd-feabf4a1d9db",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "HostLibraryTests/LibYamlToMsgpack.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 36,
-                  "startColumn": 16,
-                  "endLine": 36,
-                  "endColumn": 28,
-                  "snippet": {
-                    "text": "        data = yaml.load(f)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "ef55b8cf69331af14e893656388b20b2b46c8d1f0803384f72fb59e29cadf7903863e9a5072af4e1e49907515774d3046299ecf51154b87cd6f8a04305b045a0_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "efafbb4a-a8e2-3366-8e75-c4ac53a7360e",
           "kind": "fail",
           "level": "warning",
@@ -6665,6 +6778,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "def11ed10c1ddae86c776b5509b813fad278848a1efdb6a3366f78098426e4e087935ab7947417d638755b419b9273188fce789dcf9b707749eb5aa7832175b6_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "952fff37-74c8-3bbf-a2fd-feabf4a1d9db",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "HostLibraryTests/LibYamlToMsgpack.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 16,
+                  "endLine": 36,
+                  "endColumn": 28,
+                  "snippet": {
+                    "text": "        data = yaml.load(f)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "ef55b8cf69331af14e893656388b20b2b46c8d1f0803384f72fb59e29cadf7903863e9a5072af4e1e49907515774d3046299ecf51154b87cd6f8a04305b045a0_0"
           },
           "properties": {}
         },
@@ -6948,37 +7092,6 @@
           "properties": {}
         },
         {
-          "ruleId": "d647d5b3-8a75-3d14-a93a-fe2a87ee15c3",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "HostLibraryTests/hip/HipSolutionAdapter_test.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 124,
-                  "startColumn": 19,
-                  "endLine": 124,
-                  "endColumn": 62,
-                  "snippet": {
-                    "text": "    HIP_CHECK_EXC(hipMalloc(&d_d, desc.totalAllocatedBytes()));"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "39a2d401b4c4bc7df5f41266fe08b8d03a5e3318f4504d3ea29b4a13115522258d0ebcb0b6ec2afa00282d6c36a8b07107228228c845d22077fe60cecef63e1e_3"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "c6b655fc-4fce-3082-bbaa-b88319917840",
           "kind": "fail",
           "level": "warning",
@@ -7010,7 +7123,7 @@
           "properties": {}
         },
         {
-          "ruleId": "a5e7a05d-46b7-35fc-b6ec-a9558bf20dc5",
+          "ruleId": "d647d5b3-8a75-3d14-a93a-fe2a87ee15c3",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -7020,23 +7133,23 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "HostLibraryTests/hip/RunGEMMKernelTileSelection_test.cpp",
+                  "uri": "HostLibraryTests/hip/HipSolutionAdapter_test.cpp",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 101,
-                  "startColumn": 23,
-                  "endLine": 101,
-                  "endColumn": 73,
+                  "startLine": 124,
+                  "startColumn": 19,
+                  "endLine": 124,
+                  "endColumn": 62,
                   "snippet": {
-                    "text": "        HIP_CHECK_EXC(hipMalloc(&b_d, problem.b().totalAllocatedBytes()));"
+                    "text": "    HIP_CHECK_EXC(hipMalloc(&d_d, desc.totalAllocatedBytes()));"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "65181fc9c88fd625bba57b7ddb4f6f11fdab52cd83dc3a4d33dcdcd87c237fbbded5bf4e7240e23646292a3f5f08cc9720311037278e0df3f356add9656cb075_1"
+            "matchBasedId/v1": "39a2d401b4c4bc7df5f41266fe08b8d03a5e3318f4504d3ea29b4a13115522258d0ebcb0b6ec2afa00282d6c36a8b07107228228c845d22077fe60cecef63e1e_3"
           },
           "properties": {}
         },
@@ -7068,6 +7181,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "65181fc9c88fd625bba57b7ddb4f6f11fdab52cd83dc3a4d33dcdcd87c237fbbded5bf4e7240e23646292a3f5f08cc9720311037278e0df3f356add9656cb075_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "a5e7a05d-46b7-35fc-b6ec-a9558bf20dc5",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "HostLibraryTests/hip/RunGEMMKernelTileSelection_test.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 23,
+                  "endLine": 101,
+                  "endColumn": 73,
+                  "snippet": {
+                    "text": "        HIP_CHECK_EXC(hipMalloc(&b_d, problem.b().totalAllocatedBytes()));"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "65181fc9c88fd625bba57b7ddb4f6f11fdab52cd83dc3a4d33dcdcd87c237fbbded5bf4e7240e23646292a3f5f08cc9720311037278e0df3f356add9656cb075_1"
           },
           "properties": {}
         },
@@ -7320,37 +7464,6 @@
           "properties": {}
         },
         {
-          "ruleId": "3d2bd9fc-f5bf-3c22-954c-7387a9b8f75b",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "HostLibraryTests/testlib/include/GEMMKernelTest_impl.hpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 298,
-                  "startColumn": 12,
-                  "endLine": 298,
-                  "endColumn": 82,
-                  "snippet": {
-                    "text": "    size_t cSize = RoundUpToMultiple(problem.c().totalAllocatedBytes(), pageSize);"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "bfedb004823cd80645e6f8dd699d229e89b33dab18fb2e882057520e51083f7426afe79e8c2a29e9701d83991b6592111a508879420b699c9d7dafe4a707c1b6_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "de9f83b2-56fb-3aaa-ae44-25281adbd5cc",
           "kind": "fail",
           "level": "warning",
@@ -7378,6 +7491,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "509e6642560992eb24be91401fe45dfa67dbf4b6792881afcf7993ce4a0c58afbabc159f2fbcb897e89fd7306a3b3bdd087379e14175357a93611698c3c81f57_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "3d2bd9fc-f5bf-3c22-954c-7387a9b8f75b",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "HostLibraryTests/testlib/include/GEMMKernelTest_impl.hpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 298,
+                  "startColumn": 12,
+                  "endLine": 298,
+                  "endColumn": 82,
+                  "snippet": {
+                    "text": "    size_t cSize = RoundUpToMultiple(problem.c().totalAllocatedBytes(), pageSize);"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "bfedb004823cd80645e6f8dd699d229e89b33dab18fb2e882057520e51083f7426afe79e8c2a29e9701d83991b6592111a508879420b699c9d7dafe4a707c1b6_0"
           },
           "properties": {}
         },
@@ -7444,37 +7588,6 @@
           "properties": {}
         },
         {
-          "ruleId": "c8dc38fe-e1a9-32d9-9b7c-473a2609285e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "HostLibraryTests/testlib/include/TestUtils.hpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 151,
-                  "startColumn": 17,
-                  "endLine": 151,
-                  "endColumn": 48,
-                  "snippet": {
-                    "text": "                memcpy(dst_col, src_col, bytes);"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "5b4c2cb72d191a78ea370045082cf97f8210c1fa966506194bee11eec51e0b5668803ce9bcb56b962da591f020022840e1a2110bae05361e9da38a95d5a19883_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "fed8bed7-f971-3a98-9266-ac6b052f573f",
           "kind": "fail",
           "level": "warning",
@@ -7506,11 +7619,11 @@
           "properties": {}
         },
         {
-          "ruleId": "969d73d5-3717-3d73-8563-17584f7d3abc",
+          "ruleId": "c8dc38fe-e1a9-32d9-9b7c-473a2609285e",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
           },
           "locations": [
             {
@@ -7520,19 +7633,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 175,
-                  "startColumn": 16,
-                  "endLine": 175,
-                  "endColumn": 50,
+                  "startLine": 151,
+                  "startColumn": 17,
+                  "endLine": 151,
+                  "endColumn": 48,
                   "snippet": {
-                    "text": "        size_t n = std::exp(random_size(rng)) + 1;"
+                    "text": "                memcpy(dst_col, src_col, bytes);"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "a1278468009e26f3f8a1593293882b80f0a8026d381c3be06bc5071fe203c1117d1b918f731953fb63966c076db4b4f75a1705891fb2880e58fa35ad5ce53cc8_0"
+            "matchBasedId/v1": "5b4c2cb72d191a78ea370045082cf97f8210c1fa966506194bee11eec51e0b5668803ce9bcb56b962da591f020022840e1a2110bae05361e9da38a95d5a19883_0"
           },
           "properties": {}
         },
@@ -7568,33 +7681,33 @@
           "properties": {}
         },
         {
-          "ruleId": "b826693a-9e2c-37fb-ba69-4817ca266b0c",
+          "ruleId": "969d73d5-3717-3d73-8563-17584f7d3abc",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "pdb is an interactive debugging tool and you may have forgotten to remove it before committing your code\n"
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "Tensile/AsmRegisterPool.py",
+                  "uri": "HostLibraryTests/testlib/include/TestUtils.hpp",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 326,
-                  "startColumn": 21,
-                  "endLine": 326,
-                  "endColumn": 36,
+                  "startLine": 175,
+                  "startColumn": 16,
+                  "endLine": 175,
+                  "endColumn": 50,
                   "snippet": {
-                    "text": "        import pdb; pdb.set_trace()"
+                    "text": "        size_t n = std::exp(random_size(rng)) + 1;"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "de2952849526a8cf1a98afc58e3e853abaff3556146562626fa0ebb30d136404a65e9ba801d02d42126bd806fc6b1579c73bd0c7b4b766e5a0116a023632b6af_0"
+            "matchBasedId/v1": "a1278468009e26f3f8a1593293882b80f0a8026d381c3be06bc5071fe203c1117d1b918f731953fb63966c076db4b4f75a1705891fb2880e58fa35ad5ce53cc8_0"
           },
           "properties": {}
         },
@@ -7630,33 +7743,33 @@
           "properties": {}
         },
         {
-          "ruleId": "55453ad4-f45b-3aed-a0c8-b04ad2510d9e",
+          "ruleId": "b826693a-9e2c-37fb-ba69-4817ca266b0c",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
+            "text": "pdb is an interactive debugging tool and you may have forgotten to remove it before committing your code\n"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "Tensile/BenchmarkSplitter.py",
+                  "uri": "Tensile/AsmRegisterPool.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 43,
-                  "startColumn": 20,
-                  "endLine": 43,
-                  "endColumn": 44,
+                  "startLine": 326,
+                  "startColumn": 21,
+                  "endLine": 326,
+                  "endColumn": 36,
                   "snippet": {
-                    "text": "            data = yaml.load(f, yamlLoader)"
+                    "text": "        import pdb; pdb.set_trace()"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "feeb1e659af7c3a904da6b25cf15bb7c720cb7d8d830ce9551b124e55e56b66b537dc91b8d36089e7bf95340d33a97258ce69ce2b5f41799d2752bdb02177bff_0"
+            "matchBasedId/v1": "de2952849526a8cf1a98afc58e3e853abaff3556146562626fa0ebb30d136404a65e9ba801d02d42126bd806fc6b1579c73bd0c7b4b766e5a0116a023632b6af_0"
           },
           "properties": {}
         },
@@ -7688,6 +7801,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "67008b52e61f56e38a30bbb442c9eb01899b04906cb5cd5da2abbe8ae10ee5ba49a6d64a8630a648f79f02da35a7da342630e1a9c52f06a696ba8d759fe2684f_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "55453ad4-f45b-3aed-a0c8-b04ad2510d9e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/BenchmarkSplitter.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 20,
+                  "endLine": 43,
+                  "endColumn": 44,
+                  "snippet": {
+                    "text": "            data = yaml.load(f, yamlLoader)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "feeb1e659af7c3a904da6b25cf15bb7c720cb7d8d830ce9551b124e55e56b66b537dc91b8d36089e7bf95340d33a97258ce69ce2b5f41799d2752bdb02177bff_0"
           },
           "properties": {}
         },
@@ -7754,37 +7898,6 @@
           "properties": {}
         },
         {
-          "ruleId": "aad2e298-cfa7-39f9-9bcc-33f5a7851349",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'check_output' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/BuildCommands/SourceCommands.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 143,
-                  "startColumn": 19,
-                  "endLine": 143,
-                  "endColumn": 74,
-                  "snippet": {
-                    "text": "        listing = subprocess.check_output(args, stderr=subprocess.STDOUT).decode().split(\"\\n\")"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "70a0c52a200c690fa034b833016976809832a5a84199f599c39ae723e3f6d5fba0076520740e94e5eb02e43e404923a933ed702cfab57132f5f2d4bfbf108dc4_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "bfdebe9d-ee5e-3e68-b1fa-3b334d6976a0",
           "kind": "fail",
           "level": "warning",
@@ -7812,6 +7925,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "70a0c52a200c690fa034b833016976809832a5a84199f599c39ae723e3f6d5fba0076520740e94e5eb02e43e404923a933ed702cfab57132f5f2d4bfbf108dc4_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "aad2e298-cfa7-39f9-9bcc-33f5a7851349",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'check_output' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/BuildCommands/SourceCommands.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 19,
+                  "endLine": 143,
+                  "endColumn": 74,
+                  "snippet": {
+                    "text": "        listing = subprocess.check_output(args, stderr=subprocess.STDOUT).decode().split(\"\\n\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "70a0c52a200c690fa034b833016976809832a5a84199f599c39ae723e3f6d5fba0076520740e94e5eb02e43e404923a933ed702cfab57132f5f2d4bfbf108dc4_1"
           },
           "properties": {}
         },
@@ -7878,37 +8022,6 @@
           "properties": {}
         },
         {
-          "ruleId": "897c9f47-de02-370d-80a4-6f85ac693f32",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'check_output' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/ClientExecutable.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 23,
-                  "endLine": 54,
-                  "endColumn": 116,
-                  "snippet": {
-                    "text": "                out = subprocess.check_output(args, stderr=subprocess.STDOUT, cwd=Common.ensurePath(self.buildDir))"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "b6602be405a4babc9ad3a6e644b31ec734606762bcaebd31b11e1e150738468218f2514e8bdc2e35297487ea385759f3b0c0aae4fb5757853a4f34f173781b34_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "3f28dbb9-38c2-3598-b55c-1523a83f8fdf",
           "kind": "fail",
           "level": "warning",
@@ -7936,6 +8049,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "b6602be405a4babc9ad3a6e644b31ec734606762bcaebd31b11e1e150738468218f2514e8bdc2e35297487ea385759f3b0c0aae4fb5757853a4f34f173781b34_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "897c9f47-de02-370d-80a4-6f85ac693f32",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'check_output' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/ClientExecutable.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 23,
+                  "endLine": 54,
+                  "endColumn": 116,
+                  "snippet": {
+                    "text": "                out = subprocess.check_output(args, stderr=subprocess.STDOUT, cwd=Common.ensurePath(self.buildDir))"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "b6602be405a4babc9ad3a6e644b31ec734606762bcaebd31b11e1e150738468218f2514e8bdc2e35297487ea385759f3b0c0aae4fb5757853a4f34f173781b34_0"
           },
           "properties": {}
         },
@@ -8126,37 +8270,6 @@
           "properties": {}
         },
         {
-          "ruleId": "22541440-794d-34dd-a5c1-52913b9fd5ff",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Common.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 2247,
-                  "startColumn": 13,
-                  "endLine": 2247,
-                  "endColumn": 65,
-                  "snippet": {
-                    "text": "  process = subprocess.run([enumerator], stdout=subprocess.PIPE)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "f13878e29fa9cf3041b6ab9c281861461c5e34cf076ca6c924a9c7737062d7588a51252d08ecafd422503a3bb21281a266113c26d298a568b47230e548719de8_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "d2ed8019-42e5-3301-85b5-5778a4bc445b",
           "kind": "fail",
           "level": "warning",
@@ -8184,6 +8297,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "0062b7a99d82d3898b7491ce6c4ce0218091de25384b85af3054618b70451651cb3bcead548ebc58de833740bf91d917fd65799146cd2aba6a213d0ff44beff4_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "22541440-794d-34dd-a5c1-52913b9fd5ff",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Common.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2247,
+                  "startColumn": 13,
+                  "endLine": 2247,
+                  "endColumn": 65,
+                  "snippet": {
+                    "text": "  process = subprocess.run([enumerator], stdout=subprocess.PIPE)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "f13878e29fa9cf3041b6ab9c281861461c5e34cf076ca6c924a9c7737062d7588a51252d08ecafd422503a3bb21281a266113c26d298a568b47230e548719de8_1"
           },
           "properties": {}
         },
@@ -8219,37 +8363,6 @@
           "properties": {}
         },
         {
-          "ruleId": "1dc06561-2a8d-3687-99c8-c362d22d4a20",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'call' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Common.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 2533,
-                  "startColumn": 7,
-                  "endLine": 2533,
-                  "endColumn": 59,
-                  "snippet": {
-                    "text": "      subprocess.call([rsmi, \"-d\", \"0\", \"--setfan\", \"50\"])"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "ec47f7183b6e34283619e66ee4d90922e2630de2367bcab6fcd2f3feef70a85e1fff2cc7e0004e00644f434cdb8ef1c8656ae2e57dce9413c37b4928cf76afc5_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "401ba57f-1bfc-365c-b3ac-5c9e45e137b3",
           "kind": "fail",
           "level": "warning",
@@ -8277,6 +8390,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "ec47f7183b6e34283619e66ee4d90922e2630de2367bcab6fcd2f3feef70a85e1fff2cc7e0004e00644f434cdb8ef1c8656ae2e57dce9413c37b4928cf76afc5_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "1dc06561-2a8d-3687-99c8-c362d22d4a20",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'call' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Common.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2533,
+                  "startColumn": 7,
+                  "endLine": 2533,
+                  "endColumn": 59,
+                  "snippet": {
+                    "text": "      subprocess.call([rsmi, \"-d\", \"0\", \"--setfan\", \"50\"])"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "ec47f7183b6e34283619e66ee4d90922e2630de2367bcab6fcd2f3feef70a85e1fff2cc7e0004e00644f434cdb8ef1c8656ae2e57dce9413c37b4928cf76afc5_1"
           },
           "properties": {}
         },
@@ -8560,37 +8704,6 @@
           "properties": {}
         },
         {
-          "ruleId": "bb352fd0-c4e3-3a93-8d17-eb84492fca54",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "`return` only makes sense inside a function"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Components/MAC_F16_HPA.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 130,
-                  "startColumn": 28,
-                  "endLine": 130,
-                  "endColumn": 74,
-                  "snippet": {
-                    "text": "    asmCaps = lambda caps: caps['v_mad_mix_f32'] or caps['v_fma_mix_f32']"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "cc73f1458acc13fe6a545135c3920264515dbae4cb9fafccb3fd4c2a6ec4241f619fb225ac8ae716473e5ae4ab693077c6e1065211bf0f23653a644040c2164a_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "46d447ef-40bf-3901-8c81-e27cfc8fb1b5",
           "kind": "fail",
           "level": "warning",
@@ -8618,6 +8731,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "db436cb550530d09d62835b33453ecd269563c70166c20b6539ec6e938cfd02a62df36b087ec7087512f3fd8ae86a40878d82244ac258447f6316d76496245a2_4"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "bb352fd0-c4e3-3a93-8d17-eb84492fca54",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` only makes sense inside a function"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 130,
+                  "startColumn": 28,
+                  "endLine": 130,
+                  "endColumn": 74,
+                  "snippet": {
+                    "text": "    asmCaps = lambda caps: caps['v_mad_mix_f32'] or caps['v_fma_mix_f32']"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "cc73f1458acc13fe6a545135c3920264515dbae4cb9fafccb3fd4c2a6ec4241f619fb225ac8ae716473e5ae4ab693077c6e1065211bf0f23653a644040c2164a_1"
           },
           "properties": {}
         },
@@ -8684,37 +8828,6 @@
           "properties": {}
         },
         {
-          "ruleId": "d6738613-8d0a-330d-be6f-fbe167158ab6",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Components/MAC_F16_HPA.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 197,
-                  "startColumn": 36,
-                  "endLine": 197,
-                  "endColumn": 58,
-                  "snippet": {
-                    "text": "                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "db436cb550530d09d62835b33453ecd269563c70166c20b6539ec6e938cfd02a62df36b087ec7087512f3fd8ae86a40878d82244ac258447f6316d76496245a2_7"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "71476bb8-ee90-3939-b99c-0447f8612bfc",
           "kind": "fail",
           "level": "warning",
@@ -8742,6 +8855,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "cc73f1458acc13fe6a545135c3920264515dbae4cb9fafccb3fd4c2a6ec4241f619fb225ac8ae716473e5ae4ab693077c6e1065211bf0f23653a644040c2164a_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "d6738613-8d0a-330d-be6f-fbe167158ab6",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Components/MAC_F16_HPA.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 197,
+                  "startColumn": 36,
+                  "endLine": 197,
+                  "endColumn": 58,
+                  "snippet": {
+                    "text": "                    vars[\"cidx\"] = eval(vars[\"cIdxExpr\"])"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "db436cb550530d09d62835b33453ecd269563c70166c20b6539ec6e938cfd02a62df36b087ec7087512f3fd8ae86a40878d82244ac258447f6316d76496245a2_7"
           },
           "properties": {}
         },
@@ -9056,37 +9200,6 @@
           "properties": {}
         },
         {
-          "ruleId": "dfbb7b6b-8e04-3a31-a761-ce3cd833403a",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Configs/miopen/archives/ext2/2020-11-05/clients/samples/example_gemm_ext2-tn.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 76,
-                  "startColumn": 12,
-                  "endLine": 76,
-                  "endColumn": 84,
-                  "snippet": {
-                    "text": "    size_t size_c = size_t(m - 1) * row_stride_c + size_t(n - 1) * col_stride_c + 1;"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "41ede9e861e8d691bd661b758d95bda683537a5097102e15fb0ee1b36ef8277c09023a181d0dd1771f7b4b9f2818ae48dff82a5cbc3bc526d5c94237b21cd7ad_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "2a89a074-d8d4-378a-8185-3d56b9014c0f",
           "kind": "fail",
           "level": "warning",
@@ -9114,6 +9227,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "4aef2179e8617557b540ed054370438c82e7b134d2e92c991acb66e9a385ece8e18da37c425df9b20c320ba3ab74d72d321d13f1b347e7622690b05e610e79a3_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "dfbb7b6b-8e04-3a31-a761-ce3cd833403a",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Configs/miopen/archives/ext2/2020-11-05/clients/samples/example_gemm_ext2-tn.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 12,
+                  "endLine": 76,
+                  "endColumn": 84,
+                  "snippet": {
+                    "text": "    size_t size_c = size_t(m - 1) * row_stride_c + size_t(n - 1) * col_stride_c + 1;"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "41ede9e861e8d691bd661b758d95bda683537a5097102e15fb0ee1b36ef8277c09023a181d0dd1771f7b4b9f2818ae48dff82a5cbc3bc526d5c94237b21cd7ad_0"
           },
           "properties": {}
         },
@@ -11443,37 +11587,6 @@
           "properties": {}
         },
         {
-          "ruleId": "6a85b07d-9bfe-3e38-96d3-66c94f2c3b3e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Source/client/source/ConvolutionProblem.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 75,
-                  "startColumn": 20,
-                  "endLine": 75,
-                  "endColumn": 52,
-                  "snippet": {
-                    "text": "            size_t position = m_channelPosition + 1;"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "6934760d788f2b7eca64437b75502903ca457c9470897073c400e7f0bece511b2f20d4f0c83303c8972dc50503239edf6cfd60b53f6dee2c146e26194c9b830f_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "187c50f2-f979-35e6-8276-95ad8ec3c9ad",
           "kind": "fail",
           "level": "warning",
@@ -11501,6 +11614,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "896822ee76157ce216fbaeea9698b14a13845a9af76aea9eaafe05f3c3da21897d3570d32f9af0ed3f1a464e52fa54229e0d45c559f2a1ca8b693587872ad2be_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "6a85b07d-9bfe-3e38-96d3-66c94f2c3b3e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Source/client/source/ConvolutionProblem.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 20,
+                  "endLine": 75,
+                  "endColumn": 52,
+                  "snippet": {
+                    "text": "            size_t position = m_channelPosition + 1;"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "6934760d788f2b7eca64437b75502903ca457c9470897073c400e7f0bece511b2f20d4f0c83303c8972dc50503239edf6cfd60b53f6dee2c146e26194c9b830f_0"
           },
           "properties": {}
         },
@@ -11594,6 +11738,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "896822ee76157ce216fbaeea9698b14a13845a9af76aea9eaafe05f3c3da21897d3570d32f9af0ed3f1a464e52fa54229e0d45c559f2a1ca8b693587872ad2be_3"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "dbe74aab-9500-3ca1-ac26-33d2cdde41b4",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Source/client/source/ConvolutionProblem.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 321,
+                  "startColumn": 16,
+                  "endLine": 321,
+                  "endColumn": 58,
+                  "snippet": {
+                    "text": "        size_t formatNumSpatialDims = parts[1].size() - 2;"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "93b24ff5e6ec4f33b8c6118dd7d47f460093f9ec839e015d37781330cf3db1130bec4d917d923cdafb4f09ec9ee7ac6d1d2a996d965e3000e74b17b9f4a5210d_0"
           },
           "properties": {}
         },
@@ -11784,37 +11959,6 @@
           "properties": {}
         },
         {
-          "ruleId": "6be730d3-16b4-3d67-89e6-986fad5586e7",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Source/client/source/MetaRunListener.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 158,
-                  "startColumn": 20,
-                  "endLine": 158,
-                  "endColumn": 29,
-                  "snippet": {
-                    "text": "            size_t count = 0;"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "0dae2ff23d7981b676d4122213b747ad54eb26b0a3081b95fe779609c723db1098002c9aa12152a57d76af77032ebc213ffad25a8775b8e1f90b1c02913c5792_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "faf73247-ee20-3849-8d7a-81c5104a969a",
           "kind": "fail",
           "level": "warning",
@@ -11842,6 +11986,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "0dae2ff23d7981b676d4122213b747ad54eb26b0a3081b95fe779609c723db1098002c9aa12152a57d76af77032ebc213ffad25a8775b8e1f90b1c02913c5792_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "6be730d3-16b4-3d67-89e6-986fad5586e7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Source/client/source/MetaRunListener.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 158,
+                  "startColumn": 20,
+                  "endLine": 158,
+                  "endColumn": 29,
+                  "snippet": {
+                    "text": "            size_t count = 0;"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "0dae2ff23d7981b676d4122213b747ad54eb26b0a3081b95fe779609c723db1098002c9aa12152a57d76af77032ebc213ffad25a8775b8e1f90b1c02913c5792_1"
           },
           "properties": {}
         },
@@ -12032,37 +12207,6 @@
           "properties": {}
         },
         {
-          "ruleId": "02bb6af2-6090-3800-821d-4343b328d36f",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Source/client/source/Reference.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 348,
-                  "startColumn": 17,
-                  "endLine": 348,
-                  "endColumn": 42,
-                  "snippet": {
-                    "text": "                _putenv(\"OMP_PROC_BIND=\");"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "ae8eba175a69ad2a16d611d29b8f9d515fb5a393fc8f0cf3bdb1aecd0a7c3bffebfd5bfec2ca4cec4b25bb6296bcd266b2183f5e95a514d36a81326091fa8470_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "7d7ff3db-a66a-3278-8580-a4136b1647f8",
           "kind": "fail",
           "level": "warning",
@@ -12090,6 +12234,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "86d7781782042118e3bab04b7f3027bfd7d6db430327b33db5043a3072d3ae5359b6cbf1b58880db33a4fcee2aaa3e0e8a5dd731049ce71b36edc6dd27ded42b_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "02bb6af2-6090-3800-821d-4343b328d36f",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Source/client/source/Reference.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 348,
+                  "startColumn": 17,
+                  "endLine": 348,
+                  "endColumn": 42,
+                  "snippet": {
+                    "text": "                _putenv(\"OMP_PROC_BIND=\");"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "ae8eba175a69ad2a16d611d29b8f9d515fb5a393fc8f0cf3bdb1aecd0a7c3bffebfd5bfec2ca4cec4b25bb6296bcd266b2183f5e95a514d36a81326091fa8470_0"
           },
           "properties": {}
         },
@@ -12156,37 +12331,6 @@
           "properties": {}
         },
         {
-          "ruleId": "b45c68ab-653a-30e2-9cae-9346db9e056e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Source/client/source/ReferenceValidator.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 365,
-                  "startColumn": 27,
-                  "endLine": 365,
-                  "endColumn": 59,
-                  "snippet": {
-                    "text": "            HIP_CHECK_EXC(hipHostMalloc(&buffer, bytes, 0));"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "53e7612551d72e391a1addd5916a6bd58e4f3620af23cdc49cd225f0e1d6009726c41c066934a799d0ae2142160212d515add0f436f09339078882e1c86236e8_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "f40af28f-5f54-3b72-907d-e6543987db00",
           "kind": "fail",
           "level": "warning",
@@ -12214,6 +12358,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "88529c45b9d3837c33d0821982b10e5c5930a9591f873af856a3d13c7bd9f330123abe8fed3db0c1dbf42b7cac34f6d18d37cedb8f6dc1aa7c679cccf3b3f111_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "b45c68ab-653a-30e2-9cae-9346db9e056e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Source/client/source/ReferenceValidator.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 365,
+                  "startColumn": 27,
+                  "endLine": 365,
+                  "endColumn": 59,
+                  "snippet": {
+                    "text": "            HIP_CHECK_EXC(hipHostMalloc(&buffer, bytes, 0));"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "53e7612551d72e391a1addd5916a6bd58e4f3620af23cdc49cd225f0e1d6009726c41c066934a799d0ae2142160212d515add0f436f09339078882e1c86236e8_0"
           },
           "properties": {}
         },
@@ -12435,6 +12610,37 @@
           "properties": {}
         },
         {
+          "ruleId": "21e64154-0b39-3ddc-ad30-a4e88d92ae0e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Source/client/source/ReferenceValidator.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 540,
+                  "startColumn": 30,
+                  "endLine": 540,
+                  "endColumn": 47,
+                  "snippet": {
+                    "text": "                size_t       prevBaseIndex = 0;"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "ea29d649a9a3aa66e539bbfa273436a587a77700d9d456240a6534947e3e9391878234e7ec841e96d86b5494d11e44fa83a8231db042e360fe6a3f27f139d744_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "e95152f2-9480-39bc-a473-3e2286ce8d9c",
           "kind": "fail",
           "level": "warning",
@@ -12621,6 +12827,37 @@
           "properties": {}
         },
         {
+          "ruleId": "f148e215-42e4-395f-86f0-ad9909510e0d",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'check_output' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/TensileBenchmarkCluster.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 231,
+                  "startColumn": 23,
+                  "endLine": 231,
+                  "endColumn": 102,
+                  "snippet": {
+                    "text": "                out = subprocess.check_output(shlex.split(invokeCmd), stdout=logFile, stderr=logFile)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "45b926c44554623ca50cf3971378f9c1e5438d7d089c9ffdd88f7e74be8852ae4fc38a90bd038c96ca32dbd86e65e500e2fc9554c0a48452fa67eff24940a941_1"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "0e5aea10-5e4a-35ff-a692-115d12b66c90",
           "kind": "fail",
           "level": "warning",
@@ -12714,37 +12951,6 @@
           "properties": {}
         },
         {
-          "ruleId": "b536f2ef-0c85-32fc-a78a-3095a5ea45f4",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/TensileCreateLib/ParseArguments.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 13,
-                  "endLine": 45,
-                  "endColumn": 24,
-                  "snippet": {
-                    "text": "    value = eval(value)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "fd62d33b9ca052800e9bb9249f617f375c6e36f50b3f55adfd733062defbca8df3a6b8615fd68307e09c1556d4a1d5c9bf76349bc7814e22c9d8732a13fa50a5_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "28aaa62f-e3a1-3205-9463-c9afb7340741",
           "kind": "fail",
           "level": "warning",
@@ -12772,6 +12978,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "02ec6950e3bab9369787d07ce820b0907eaf4433136b2fd2bf7bf94af7f70865fe9a301084cfb22477434782e0715f6e5ca250fe11a5c011bbef42d9f8ea3375_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "b536f2ef-0c85-32fc-a78a-3095a5ea45f4",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/TensileCreateLib/ParseArguments.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 13,
+                  "endLine": 45,
+                  "endColumn": 24,
+                  "snippet": {
+                    "text": "    value = eval(value)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "fd62d33b9ca052800e9bb9249f617f375c6e36f50b3f55adfd733062defbca8df3a6b8615fd68307e09c1556d4a1d5c9bf76349bc7814e22c9d8732a13fa50a5_0"
           },
           "properties": {}
         },
@@ -13582,37 +13819,6 @@
           "properties": {}
         },
         {
-          "ruleId": "0b92b0d1-8c73-3525-aa58-9e1b301d4861",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Tests/unit/test_TensileCreateLibrary.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 173,
-                  "startColumn": 16,
-                  "endLine": 173,
-                  "endColumn": 45,
-                  "snippet": {
-                    "text": "    metadata = yaml.load(stream, yamlLoader)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "81df43cac6b11b6e8aa258337d5802319a9d579c807a24870dc9b36b4d38c50dd0079a220863eed7cd0221c0f35ecc7149b881d3e463748f6dcc0aebd6832b57_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "a0faf189-5f18-31df-abed-a796244c1c2f",
           "kind": "fail",
           "level": "warning",
@@ -13640,6 +13846,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "b8b10952e90642a6f3f10ac859a66ab746997bc7c289f9155d4aed20fd90748fc5ed3201659a72341657197cf3b1e9d520ed22376fb05c16f62d1a57591d37b3_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "0b92b0d1-8c73-3525-aa58-9e1b301d4861",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Tests/unit/test_TensileCreateLibrary.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 173,
+                  "startColumn": 16,
+                  "endLine": 173,
+                  "endColumn": 45,
+                  "snippet": {
+                    "text": "    metadata = yaml.load(stream, yamlLoader)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "81df43cac6b11b6e8aa258337d5802319a9d579c807a24870dc9b36b4d38c50dd0079a220863eed7cd0221c0f35ecc7149b881d3e463748f6dcc0aebd6832b57_1"
           },
           "properties": {}
         },
@@ -13830,37 +14067,6 @@
           "properties": {}
         },
         {
-          "ruleId": "792feffb-bfa7-39f9-8a6e-c57d9be34893",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Tests/unit/test_mergeLogic.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 308,
-                  "startColumn": 19,
-                  "endLine": 308,
-                  "endColumn": 51,
-                  "snippet": {
-                    "text": "  incData       = yaml.load(incLogic,  yamlLoader)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "e0a58678495f9717e644f83516c68fa44d96d14a191ca48ecbf233be75cd6046c10fe0f3d8ec23a0229542914d15bd461650851377c135247cd630f472e39643_6"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "46e065fa-e9fa-3b25-af75-f24ce65a32a8",
           "kind": "fail",
           "level": "warning",
@@ -13888,6 +14094,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "e0a58678495f9717e644f83516c68fa44d96d14a191ca48ecbf233be75cd6046c10fe0f3d8ec23a0229542914d15bd461650851377c135247cd630f472e39643_5"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "792feffb-bfa7-39f9-8a6e-c57d9be34893",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Avoid using `load()`. `PyYAML.load` can create arbitrary Python\nobjects. A malicious actor could exploit this to run arbitrary\ncode. Use `safe_load()` instead.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Tests/unit/test_mergeLogic.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 308,
+                  "startColumn": 19,
+                  "endLine": 308,
+                  "endColumn": 51,
+                  "snippet": {
+                    "text": "  incData       = yaml.load(incLogic,  yamlLoader)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "e0a58678495f9717e644f83516c68fa44d96d14a191ca48ecbf233be75cd6046c10fe0f3d8ec23a0229542914d15bd461650851377c135247cd630f472e39643_6"
           },
           "properties": {}
         },
@@ -13954,37 +14191,6 @@
           "properties": {}
         },
         {
-          "ruleId": "5e8ad424-93cf-38e4-bc0d-9fe68e6a5d0d",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'check_output' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Tensile/Tests/yaml_only/test_config.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 183,
-                  "startColumn": 16,
-                  "endLine": 183,
-                  "endColumn": 69,
-                  "snippet": {
-                    "text": "      output = subprocess.check_output([rocmAgentEnum, \"-t\", \"GPU\"])"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "dcc786f955a4f741312edf8f9688e3396552d65d8550a49869328e39f655d48d43002482a83bef2d400e21d3bf92ebbcb16516b73993f260aaf6b31290cbe55b_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "f2c34853-bcdd-3319-a1ed-28c5c6ca5c7e",
           "kind": "fail",
           "level": "warning",
@@ -14012,6 +14218,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "dcc786f955a4f741312edf8f9688e3396552d65d8550a49869328e39f655d48d43002482a83bef2d400e21d3bf92ebbcb16516b73993f260aaf6b31290cbe55b_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "5e8ad424-93cf-38e4-bc0d-9fe68e6a5d0d",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'check_output' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Tests/yaml_only/test_config.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 183,
+                  "startColumn": 16,
+                  "endLine": 183,
+                  "endColumn": 69,
+                  "snippet": {
+                    "text": "      output = subprocess.check_output([rocmAgentEnum, \"-t\", \"GPU\"])"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "dcc786f955a4f741312edf8f9688e3396552d65d8550a49869328e39f655d48d43002482a83bef2d400e21d3bf92ebbcb16516b73993f260aaf6b31290cbe55b_1"
           },
           "properties": {}
         },
@@ -14074,6 +14311,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "b2a2ecad11e22f98290bea0a8b3f5aafcc41a0ecd5a688db269e2ed41289f576b376889d9c899116632572fb48117a02ff536ef42ec7e079c5c0524df4583929_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "571645eb-3201-30dd-80d4-0224f8e778ad",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "file object opened without corresponding close"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Tensile/Utilities/archive/merge_rocblas_yaml_files.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 9,
+                  "endLine": 66,
+                  "endColumn": 37,
+                  "snippet": {
+                    "text": "        stream = open(filename, \"r\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "7333cf56d1f9d24dd0b7d10904f120105e5a63fee52d35c7a389f6f71b362ca9fa9266ca61ddb92e07a646a4d8b4cdc3b2d887b87b66930fb826cb3b7814d232_0"
           },
           "properties": {}
         },
@@ -14171,37 +14439,6 @@
           "properties": {}
         },
         {
-          "ruleId": "ca9dc843-0b22-3c96-acb6-76f0be8781da",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "This 'pip3 install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "docker/dockerfile-build-ubuntu-rock",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 65,
-                  "startColumn": 1,
-                  "endLine": 65,
-                  "endColumn": 28,
-                  "snippet": {
-                    "text": "RUN pip3 install setuptools --upgrade && \\"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "e425d4de7ea1e730c151f59a888191385f4c8aafc493fa07b76a795458e98e7588835ad5932a35e47cf04522493cd61a506bffb559ec8895faed5c2122e155e5_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "d7a0022c-bfd0-3c5b-b54f-4ad1b5ebaf18",
           "kind": "fail",
           "level": "warning",
@@ -14229,6 +14466,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "d24de5fcf3b4371e1e242f8b7f3301c91cbf2540212d0ca31de23309053ed9fde6bd709cb36bc0804536b0737bc33aecfc6b5996f1d3da82dba91d0d1cb94d4f_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "ca9dc843-0b22-3c96-acb6-76f0be8781da",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "This 'pip3 install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker/dockerfile-build-ubuntu-rock",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 65,
+                  "startColumn": 1,
+                  "endLine": 65,
+                  "endColumn": 28,
+                  "snippet": {
+                    "text": "RUN pip3 install setuptools --upgrade && \\"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "e425d4de7ea1e730c151f59a888191385f4c8aafc493fa07b76a795458e98e7588835ad5932a35e47cf04522493cd61a506bffb559ec8895faed5c2122e155e5_0"
           },
           "properties": {}
         },
@@ -14326,6 +14594,37 @@
           "properties": {}
         },
         {
+          "ruleId": "9bd1a224-2d09-3f1c-ba34-872110b39bac",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "This 'pip3 install' is missing '--no-cache-dir'. This flag prevents\npackage archives from being kept around, thereby reducing image size.\nAdd '--no-cache-dir'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker/dockerfile-tensile-tuning-slurm",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 1,
+                  "endLine": 67,
+                  "endColumn": 28,
+                  "snippet": {
+                    "text": "RUN pip3 install setuptools --upgrade && \\"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "cf74d40c5653906499755935fd5cfb664fb1af91d46ef66d00adaf51a3d36bd38c7c64e2f36e6959544910465259c3b9ff2682d169761aa0263025caced8f6cf_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "fe8d00c0-7d10-3beb-ba11-ddf7f3807367",
           "kind": "fail",
           "level": "warning",
@@ -14388,37 +14687,6 @@
           "properties": {}
         },
         {
-          "ruleId": "3625b582-d3da-32fb-a7d3-52e7c8124fa7",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'check_call' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "docker/user-image/start_user_container",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 50,
-                  "startColumn": 1,
-                  "endLine": 50,
-                  "endColumn": 32,
-                  "snippet": {
-                    "text": "subprocess.check_call(out_args)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c824de818a7a7cc819163fa4a0c5d1185527f5c326cd1de9bf8352b177685e631e48f0032a971f5f50ce42b927f1bac12c8dc214f8dd04ae294f4cfa675a4a5e_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "77b8fb3f-1012-3d88-89ea-5cbaa7f00410",
           "kind": "fail",
           "level": "warning",
@@ -14446,6 +14714,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "68547e8e0557b63168085ca9be3a8b839c7a2f01a182109e3c0bc29554cd5b3f8ea9e9787c06f96280521d342facdb9b037cc120c3c4549651d46eacbcefc2c5_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "3625b582-d3da-32fb-a7d3-52e7c8124fa7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'check_call' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker/user-image/start_user_container",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 1,
+                  "endLine": 50,
+                  "endColumn": 32,
+                  "snippet": {
+                    "text": "subprocess.check_call(out_args)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c824de818a7a7cc819163fa4a0c5d1185527f5c326cd1de9bf8352b177685e631e48f0032a971f5f50ce42b927f1bac12c8dc214f8dd04ae294f4cfa675a4a5e_0"
           },
           "properties": {}
         },
